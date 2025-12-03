@@ -1,60 +1,12 @@
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * The content below * * * * * * * * * * * -->
-<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
-<!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * Delete the template below * * * * * * * * * * -->
-<!-- * * * * * * * to get started with your project! * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-
-
-  
-
-<!-- Toolbar -->
+<div class="page">
 <div class="toolbar" role="banner">
   <span class="spanHeader">SOLICITUD DE HISTORIA DE SALUD</span>
 </div>
 
 <div class="content" role="main">
 
-  <!-- Logo y bienvenida-->
-<div class="LogoHuds">
-  <img src="../assets/Logos/logo.huds.svg" alt="logo huds">
+<router-outlet></router-outlet>
 </div>
-
-  <h1 class="TituloPrincipal">Bienvenidos/as</h1>
-  <!-- Texto introductorio -->
-<div class="TextoIntro">
-  <p>Este módulo te garantiza realizar los pedidos de HUDS de una<br> 
-    forma sencilla y ordenada, asegurando la privacidad del proceso.
-  </p>
-  </div>
-
-  <!-- Bajada legal -->
-  <div class="TextoLargo">
-  <p>Recuerde que todos los ingresos y acciones realizados en la HUDS a través <br>
-     de su usuario y contraseña quedarán registrados.<br>
-     El formulario aquí presente reviste el carácter de Declaración Jurada,<br>
-    quedando sujetos los infractores a las penalidades previstas en el <br>
-    Código Penal. Es importante recordar que la Ley 2611, en su artículo 4°, inciso K, señala: <br>
-    “Los pacientes tienen derecho a la intimidad y confidencialidad de los datos. z<br>
-     En correspondencia con este derecho el servidor público debe indefectiblemente <br>
-     guardar y preservar el secreto profesional”</p>
-   </div>
-  <input type="hidden" #selection>
-
-  <div class="card-container">
-
-    <button class="card card-small" (click)="selection.value = 'component'" tabindex="0">
-      <span>INGRESAR</span>
-    </button>
-
-  </div>
-
-
-</div>
-
-  <!-- Footer -->
 <footer>
   <div class="footer-logo">
     <div class="LogoMinisterio"> 
@@ -71,11 +23,9 @@
     </div> 
   </div>
 </footer>
+</div>
 
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * The content above * * * * * * * * * * * -->
-<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
-<!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * End of Placeholder * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+
+
+
+

@@ -1,0 +1,119 @@
+.MenuPrincipal ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 193px;
+  padding: 0;
+  margin: 0;
+}
+
+.contenedor-a  {  
+  background-color: #334851;
+  width: 199px;
+  height: 44px;
+  border: 3px solid #334851;
+  display: flex;
+  align-items: center;
+
+}
+
+.contenedor-v  {  
+  border: 3px solid #83AC72;
+  width: 199px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+
+}
+
+.step-1{
+  background-color: #334851;
+  width: 30px;
+  height: 44px;
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.step-2{
+  background-color: #83AC72;
+  width: 30px;
+  height: 44px;
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+
+.Texto {
+  color: #FFFFFF;
+  font-family: "Manrope-bold";
+}
+
+.Texto-1 {
+  color: #334851;
+  font-family: "Manrope";
+  padding-left: 13px;
+}
+
+.orden-elementos {
+  display: flex;
+  margin-top: 30px;
+  gap: 750px;
+}
+
+.orden-elementos p {
+  padding-top: 6px;
+}
+
+.boton-volver {
+  border:none;
+  background-color: #FF0000;
+  color: #FFFFFF;
+  font-family: "Manrope-bold";
+  width: 107px;
+  height: 33px;
+}
+
+.boton-continuar {
+  border:none;
+  background-color: #6A972F;
+  color: #FFFFFF;
+  font-family: "Manrope-bold";
+  width: 107px;
+  height: 33px;
+}
+
+hr {
+background-color: #000000;
+height: 0.5px;
+width: 1400px;
+}
+
+b{
+  font-family: "Manrope-ExtraBold";
+}
+
+.form-contenedor{
+  display: flex;
+  justify-content: center; 
+}
+
+.carga-datos input, label{
+  display: block;
+  
+}
+
+.form {
+  width: 440px;
+  height: 50px;
+  border: 2px solid #83AC72
+}
+
+.label{
+  font-family: "Manrope-bold";
+  color: #83AC72;
+}
