@@ -76,6 +76,11 @@
   font-family: "Manrope-bold";
   width: 107px;
   height: 33px;
+  margin-right: 3px;
+}
+
+.boton-volver:hover {
+  background-color: #BF0000;
 }
 
 .boton-continuar {
@@ -110,10 +115,98 @@ b{
 .form {
   width: 440px;
   height: 50px;
-  border: 2px solid #83AC72
+  border: 2px solid #83AC72;
+  font-family: "Manrope";
+  font-size: 16px;
+  color: #334851;
+  line-height: 33px;
+  padding-left: 13px;
+  
+}
+
+.Options{
+  width: 100%;
+  height: 50px;
+  border: 2px solid #83AC72;
+  appearance: none;
+  font-family: "Manrope";
+  font-size: 16px;
+  color: #334851;
+  padding: 0 40px 0 12px;
+}
+
+.flecha {
+  width: 30px;
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+
+}
+
+.DropdownOrg {
+  position: relative;
+  width: 100%;
+}
+
+.DropdownDoc {
+  position: relative;
+  width: 100%;
 }
 
 .label{
   font-family: "Manrope-bold";
   color: #83AC72;
 }
+
+.Parrafo {
+  font-family: "Manrope-bold";
+  color: #334851;
+  font-size: 16px;
+  margin: 33px 0px 33px 0px;
+  text-align: center;
+}
+
+
+.footer-logo {
+  background-color: #FFFFFF;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 9px 10px; 
+  box-sizing: border-box;
+
+
+}
+
+.Logo-Ministerio {
+    width:130px;
+    height: 20px;
+    margin-left: 33px;
+    padding-top: 9px;
+    
+  }
+
+  .Logo-Provincia {
+    width:90px;
+    height: 30px;
+    padding-top: 9px;
+    
+  }
+
+  .Logo-Gobierno {
+    width:77px;
+    height: 33px;
+    padding-top: 9px;
+    
+  }
+
+  .Logo-Andes {
+    width:145px;
+    height: 20px;
+    margin-right: 33px;
+    padding-top: 9px;
+    
+  }

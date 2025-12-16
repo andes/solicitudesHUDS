@@ -1,8 +1,11 @@
 :host {
-    box-sizing: border-box;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    }
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: block;
+  width: 100%;
+  min-height: 100vh;
+}
     
 body {
     background-color:  #FCF2DC;
@@ -32,25 +35,6 @@ h1.TituloPrincipal {color: #83AC72;
     flex: 1;
   }
 
-  .toolbar {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    background-color: #334851;
-    color: #FCF2DC;
-    font-weight: 600;
-  }
-
-.spanHeader {
-  color:#FCF2DC;
-  margin-left:33px;
-  font-weight:900;
-}
-
 span {
   color:#FFFFFF;
 }
@@ -70,7 +54,6 @@ span {
   margin-bottom: 33px;
   font-family: "Manrope-bold";
   font-size: 18px;
-
 }
 
 .TextoLargo {
@@ -123,27 +106,35 @@ span {
   }
 
 
-  footer {
-  
+
+footer {
     align-items: center;
     margin-top: 30px;
     display: block;
     padding: 0;
     width: 100%;
-  }
+}
 
+/* Break out of the centered max-width container so footer spans viewport */
 .footer-logo {
   background-color: #334851;
-  width: 100%;
+  width: 100vw; /* viewport width */
+  margin-left: calc(50% - 50vw); /* center the full-viewport bar */
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 9px 10px; 
+  padding: 9px 10px;
   box-sizing: border-box;
-
-
 }
 
+/* Ensure images don't overflow and no filters/color changes applied */
+.footer-logo img {
+  max-height: 40px;
+  height: auto;
+  display: block;
+  filter: none;
+  background: transparent;
+}
 
 .LogoMinisterio {
     width:130px;

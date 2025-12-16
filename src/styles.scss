@@ -15,7 +15,14 @@ body {
   flex-direction: column;
   min-height: 100vh;
 }
- .content {
+
+.spanHeader {
+  color:#FCF2DC;
+  margin-left:33px;
+  font-weight:900;
+}
+
+.content {
   flex: 1 0 auto;
   display: flex;
     margin: 82px auto 0px;
@@ -25,7 +32,7 @@ body {
     align-items: center;
 }
 
-footer {
+  footer {
   margin-top: auto;
   padding-bottom: 0 !important;
 }
@@ -89,59 +96,6 @@ footer {
     background-color: #334851;
     color: #FCF2DC;
     font-weight: 600;
-  }
-
-
-
-  footer {
-    align-items: center;
-    margin-top: 30px;
-    display: block;
-    padding: 0;
-    width: 100%;
-  }
-
-.footer-logo {
-  background-color: #334851;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 9px 10px; 
-  box-sizing: border-box;
-
-
-}
-
-
-.LogoMinisterio {
-    width:130px;
-    height: 20px;
-    margin-left: 33px;
-    padding-top: 9px;
-    
-  }
-
-  .LogoProvincia {
-    width:90px;
-    height: 30px;
-    padding-top: 9px;
-    
-  }
-
-  .LogoGobierno {
-    width:77px;
-    height: 33px;
-    padding-top: 9px;
-    
-  }
-
-  .LogoAndes {
-    width:145px;
-    height: 20px;
-    margin-right: 33px;
-    padding-top: 9px;
-    
   }
 
   /* Responsive Styles */
