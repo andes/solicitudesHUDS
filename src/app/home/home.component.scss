@@ -115,11 +115,10 @@ footer {
     width: 100%;
 }
 
-/* Break out of the centered max-width container so footer spans viewport */
 .footer-logo {
   background-color: #334851;
-  width: 100vw; /* viewport width */
-  margin-left: calc(50% - 50vw); /* center the full-viewport bar */
+  width: 100vw; 
+  margin-left: calc(50% - 50vw); 
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -127,7 +126,7 @@ footer {
   box-sizing: border-box;
 }
 
-/* Ensure images don't overflow and no filters/color changes applied */
+
 .footer-logo img {
   max-height: 40px;
   height: auto;

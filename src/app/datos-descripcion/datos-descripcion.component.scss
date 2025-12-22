@@ -74,6 +74,7 @@
   margin-left: auto;
 }
 
+
 .boton-volver {
   border:none;
   background-color: #FF0000;
@@ -119,14 +120,20 @@ b{
 
 .form {
   width: 440px;
-  height: 50px;
+  height: 176px;
   border: 2px solid #83AC72;
   font-family: "Manrope";
   font-size: 16px;
   color: #334851;
   line-height: 33px;
   padding-left: 13px;
+  resize: none;
   
+}
+
+::placeholder{
+    color: #C5C5C5;
+    font-family: "Manrope";
 }
 
 .Options{
@@ -135,7 +142,7 @@ b{
   border: 2px solid #83AC72;
   appearance: none;
   font-family: "Manrope";
-  font-size: 16px;
+  font-size: 13px;
   color: #334851;
   padding: 0 40px 0 12px;
 }
@@ -150,12 +157,12 @@ b{
 
 }
 
-.DropdownOrg {
-  position: relative;
+.DropdownOrg,
+.DropdownEfe {
   width: 100%;
 }
 
-.DropdownDoc {
+.SelectWrapper {
   position: relative;
   width: 100%;
 }
@@ -164,15 +171,6 @@ b{
   font-family: "Manrope-bold";
   color: #83AC72;
 }
-
-.Parrafo {
-  font-family: "Manrope-bold";
-  color: #334851;
-  font-size: 16px;
-  margin: 33px 0px 33px 0px;
-  text-align: center;
-}
-
 
 .footer-logo {
   background-color: #FFFFFF;

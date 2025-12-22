@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-datos-paciente',
@@ -7,4 +8,9 @@ import { Component } from '@angular/core';
 })
 export class DatosPacienteComponent {
 
+    constructor(private router: Router) {}
+    
+    goto() {
+    this.router.navigate(['/descripcion']);
+  }
 }

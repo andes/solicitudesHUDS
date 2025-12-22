@@ -1,4 +1,5 @@
 import { Component, ViewEncapsulation } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-datos-solicitante',
@@ -7,5 +8,11 @@ import { Component, ViewEncapsulation } from '@angular/core';
   encapsulation: ViewEncapsulation.None
 })
 export class DatosSolicitanteComponent {
+
+    constructor(private router: Router) {}
+  
+  goto() {
+  this.router.navigate(['/paciente']);
+}
 
 }
