@@ -4,6 +4,7 @@ import { DatosSolicitanteComponent } from './datos-solicitante/datos-solicitante
 import { HomeComponent } from './home/home.component';
 import { DatosPacienteComponent } from './datos-paciente/datos-paciente.component';
 import { DatosDescripcionComponent } from './datos-descripcion/datos-descripcion.component';
+import { DatosAdjuntosComponent } from './datos-adjuntos/datos-adjuntos.component';
 
 const routes: Routes = [ // Route for the default path (homepage)
  { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -11,7 +12,7 @@ const routes: Routes = [ // Route for the default path (homepage)
   { path: 'solicitante', component: DatosSolicitanteComponent },
   { path: 'paciente', component: DatosPacienteComponent },
   { path: 'descripcion', component: DatosDescripcionComponent },
-
+{ path: 'adjuntos', component: DatosAdjuntosComponent }
 
 
 
