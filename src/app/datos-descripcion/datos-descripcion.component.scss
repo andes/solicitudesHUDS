@@ -2,7 +2,7 @@
   list-style: none;
   display: flex;
   align-items: center;
-  gap: 193px;
+  gap: 77px;
   padding: 0;
   margin: 0;
 }
@@ -166,6 +166,11 @@ b{
   position: relative;
   width: 100%;
 }
+
+.Options [value=""] {
+  display: none;
+}
+
 
 .label{
   font-family: "Manrope-bold";

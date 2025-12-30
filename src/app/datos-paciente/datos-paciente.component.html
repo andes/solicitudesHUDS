@@ -6,15 +6,27 @@
        <span class="Texto-1">Datos del solicitante</span> 
     </li>
 
+<div class="Flecha-Menu">
+   <img class="flechaMenu" src="assets/Logos/flecha.huds.svg" alt="flecha"/>
+</div>
+
     <li class="contenedor-a">
        <span class="step-1">2</span>
        <span class="Texto">Datos del paciente</span> 
     </li>
 
+<div class="Flecha-Menu">
+   <img class="flechaMenu" src="assets/Logos/flecha.huds.svg" alt="flecha"/>
+</div>
+
     <li class="contenedor-v">
        <span class="step-2">3</span>
        <span class="Texto-1">Descripción</span> 
     </li>
+
+<div class="Flecha-Menu">
+   <img class="flechaMenu" src="assets/Logos/flecha.huds.svg" alt="flecha"/>
+</div>
 
     <li class="contenedor-v">
         <span class="step-2">4</span>
@@ -34,13 +46,12 @@
 
 
 <main class="Formulario">
-<div class="form-contenedor">
+ <div class="form-contenedor">
 <form name="carga-datos">
   <label class="label">Nombre <span style="color:#E00713">*</span>:</label>
      <input class="form" type="text" name="Nombre" required>
   <label class="label">Apellido <span style="color:#E00713">*</span>:</label>
      <input class="form" type="text" name="Apellido" required>
- 
   <label class="label">Documento <span style="color:#E00713">*</span>: </label>
      <input class="form" type="text" name="Número de documento" required>
   <label class="label">Fecha de nacimiento <span style="color:#E00713">*</span>: </label>
@@ -51,6 +62,7 @@
    <div class="SelectWrapper">
    <img class=flecha src="assets/Logos/menu-down.svg" alt="Flecha"/>
   <select name="Sexo" class="Options">
+      <option value=""></option>
       <option value="Femenino">Femenino</option>
       <option value="Masculino">Masculino</option>
       <option value="No binario">No binario</option>
@@ -59,7 +71,7 @@
 </div>
 
 </form>
-</div>
+ </div>
 </main>
 
 <footer class="FooterDatos">
