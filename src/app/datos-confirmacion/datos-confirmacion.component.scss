@@ -1,0 +1,48 @@
+.LogoConfirmacion {
+    width: 72px;
+    height: 72px;
+    margin: 13px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.TextoPrincipal {
+    font-family: "Manrope-light";
+    font-size: 23px;
+    text-align: center;
+    color: #334851;
+    margin-bottom: 40px;
+}
+
+.TextoIntro {
+    text-align: center;
+    margin-bottom: 12px;
+    font-family: "Manrope-bold";
+    font-size: 18px;
+}
+
+.BotonConfirmacion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.boton-descarga {
+    width: 240px;
+    height: 46px;
+    background-color: #334851;
+    color: #ffffff;
+    border: none;
+    font-family: "Manrope-bold";
+}
+
+.boton-descarga:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 13px #334851;
+}
+
+.ContenidoConfirmacion {
+    margin-top: 90px;
+}

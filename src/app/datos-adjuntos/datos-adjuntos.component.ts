@@ -7,5 +7,9 @@ import { Router } from '@angular/router';
   styleUrls: ['./datos-adjuntos.component.scss']
 })
 export class DatosAdjuntosComponent {
-   
+    constructor(private router: Router) {}
+    
+    goto() {
+    this.router.navigate(['/confirmacion']);
+  }
 }

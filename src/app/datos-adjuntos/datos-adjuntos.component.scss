@@ -74,7 +74,6 @@
   margin-left: auto;
 }
 
-
 .boton-volver {
   border:none;
   background-color: #FF0000;
@@ -104,44 +103,6 @@ height: 0.5px;
 width: 1400px;
 }
 
-b{
-  font-family: "Manrope-ExtraBold";
-}
-
-
-.carga-datos input, label{
-  display: block;
-  
-}
-
-.form {
-  width: 440px;
-  height: 176px;
-  border: 2px solid #83AC72;
-  font-family: "Manrope";
-  font-size: 16px;
-  color: #334851;
-  line-height: 33px;
-  padding-left: 13px;
-  resize: none;
-  
-}
-
-::placeholder{
-    color: #C5C5C5;
-    font-family: "Manrope";
-}
-
-
-.flecha {
-  width: 30px;
-  position: absolute;
-  right: 12px;
-  top: 50%;
-  transform: translateY(-50%);
-  pointer-events: none;
-
-}
 
 .label{
   font-family: "Manrope-bold";
@@ -195,6 +156,8 @@ b{
     transform: translateY(-3px);
     box-shadow: 0 4px 13px #334851;
   }
+
+
 
 .footer-logo {
   background-color: #FFFFFF;
