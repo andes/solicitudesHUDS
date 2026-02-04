@@ -1,0 +1,107 @@
+<body class="layout">
+<nav class="MenuPrincipal">
+  <ul class="MenuListado">
+    <li class="contenedor-v">
+       <span class="step-2">1</span>
+       <span class="Texto-1">Datos del solicitante</span> 
+    </li>
+
+<div class="Flecha-Menu">
+   <img class="flechaMenu" src="assets/Logos/flecha.huds.svg" alt="flecha"/>
+</div>
+
+    <li class="contenedor-v">
+       <span class="step-2">2</span>
+       <span class="Texto-1">Datos del paciente</span> 
+    </li>
+
+<div class="Flecha-Menu">
+   <img class="flechaMenu" src="assets/Logos/flecha.huds.svg" alt="flecha"/>
+</div>
+
+    <li class="contenedor-a">
+       <span class="step-1">3</span>
+       <span class="Texto">Descripción</span> 
+    </li>
+
+<div class="Flecha-Menu">
+   <img class="flechaMenu" src="assets/Logos/flecha.huds.svg" alt="flecha"/>
+</div>
+
+    <li class="contenedor-v">
+        <span class="step-2">4</span>
+       <span class="Texto-1">Carga de adjuntos</span> 
+    </li>
+  </ul>
+</nav>
+
+<div class="orden-elementos">
+<p>Complete el siguiente campo detallando <b>el pedido</b></p> 
+  <div class="botones">
+    <button class="boton-volver" type="button">VOLVER</button>
+    <button class="boton-continuar" (click)= "goto()" type="button">CONTINUAR</button> 
+  </div>
+</div>
+<hr>
+
+<main class="Formulario">
+ <div class="form-contenedor">
+  <form name="carga-datos">
+     <div class="DropdownOrg">
+   <label class="label">Institución<span style="color:#E00713">*</span>:</label>
+       <div class="SelectWrapper">
+    <select class="Options">
+      <option value=""></option>
+      <option value="HTAL1">HTAL PROV NEUQUÉN - DR EDUARDO CASTRO RENDÓN</option>
+      <option value="HTAL2">HTAL HELLER - DR HORACIO BURD</option>
+      <option value="HTAL3">HTAL BOUQUET ROLDAN</option>
+      <option value="HTAL4">HTAL CENTENARIO - DR NATALIO BURD</option>
+      <option value="HTAL5">HTAL SENILLOSA</option>
+      <option value="SUBSECRETERIA DE SALUD">SUBSECRETERIA DE SALUD</option>
+      <option value="CDS">CENTRO DE SALUD</option>
+    </select>
+    <img class=flecha src="assets/Logos/menu-down.svg" alt="Flecha"/>
+       </div>
+      </div>
+
+<div class="DropdownEfe">
+  <label class="label">Seleccione efector<span style="color:#E00713">*</span>:</label>
+      <div class="SelectWrapper">
+  <select class="Options">
+      <option value=""></option>
+      <option value="Efector1">HTAL PROV NEUQUÉN - DR EDUARDO CASTRO RENDÓN</option>
+      <option value="Efector2">HTAL HELLER - DR HORACIO BURD</option>
+      <option value="Efector3">HTAL BOUQUET ROLDAN</option>
+      <option value="Efector4">HTAL CENTENARIO - DR NATALIO BURD</option>
+      <option value="Efector5">HTAL SENILLOSA</option>
+      <option value="Efector6">SUBSECRETERIA DE SALUD</option>
+      <option value="Efector7">CENTRO DE SALUD</option>
+   </select>
+   <img class=flecha src="assets/Logos/menu-down.svg" alt="Flecha"/>
+     </div>
+</div>
+ 
+<label class="label">Descripción:</label>
+   <textarea class="form" type="text" name="Nombre" placeholder="Breve descripción del pedido"></textarea>
+
+</form>
+</div>
+</main>
+
+<footer class="FooterDatos">
+  <div class="footer-logo">
+    <div class="Logo-Ministerio"> 
+      <img src="assets/Logos/logos-06.svg" alt="Logo Ministerio"/>
+    </div>
+    <div class="Logo-Provincia">
+      <img src="assets/Logos/logos-07.svg" alt="Logo provincia"/>
+    </div>
+    <div class="Logo-Gobierno"> 
+      <img src="assets/Logos/logos-08.svg" alt="Logo gobierno"/>
+    </div> 
+    <div class="Logo-Andes">
+      <img src="assets/Logos/logos-09.svg" alt="Logo andes"/>
+    </div> 
+  </div>
+</footer>
+</body>

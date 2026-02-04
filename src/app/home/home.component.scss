@@ -1,0 +1,193 @@
+:host {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: block;
+  width: 100%;
+  min-height: 100vh;
+}
+    
+body {
+    background-color:  #FCF2DC;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 8px 0;
+  }
+
+h1.TituloPrincipal {color: #83AC72;
+  font-size: 50px;
+  margin-bottom: 7px;
+  font-family: "Manrope-ExtraBold";
+  text-align: center;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  .spacer {
+    flex: 1;
+  }
+
+span {
+  color:#FFFFFF;
+}
+
+.LogoHuds {
+    width:86px;
+    height: 62px;
+    margin:13px auto;
+    filter: drop-shadow(0px 3px 6px rgba(51, 72, 81, 0.3));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.TextoIntro {
+  text-align: center;
+  margin-bottom: 33px;
+  font-family: "Manrope-bold";
+  font-size: 18px;
+}
+
+.TextoLargo {
+  text-align: center;
+  margin-bottom: 40px;
+  font-family: "Manrope-light";
+  font-size: 16px;
+}
+  .content {
+    display: flex;
+    margin: 82px auto 0px;
+    padding: 0 16px;
+    max-width: 960px;
+    flex-direction: column;
+    align-items: center;
+    //border: 2px solid #1976d2;
+  }
+
+  .card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 16px;
+  }
+
+  .card {
+    all: unset;
+    border-radius: 4px;
+    background-color: #334851;
+    height: 40px;
+    width: 200px;
+    margin: 0 8px 16px;
+    padding: 16px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s ease-in-out;
+    line-height: 24px;
+  }
+
+  .card.card-small {
+    height: 16px;
+    width: 156px;
+  }
+
+  .card-container .card:not(.highlight-card):hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 13px #334851;
+  }
+
+footer {
+    align-items: center;
+    margin-top: 30px;
+    display: block;
+    padding: 0;
+    width: 100%;
+}
+
+.footer-logo {
+  background-color: #334851;
+  width: 100vw; 
+  margin-left: calc(50% - 50vw); 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 9px 10px;
+  box-sizing: border-box;
+}
+
+
+.footer-logo img {
+  max-height: 40px;
+  height: auto;
+  display: block;
+  filter: none;
+  background: transparent;
+}
+
+.LogoMinisterio {
+    width:130px;
+    height: 20px;
+    margin-left: 33px;
+    padding-top: 9px;
+    
+  }
+
+  .LogoProvincia {
+    width:90px;
+    height: 30px;
+    padding-top: 9px;
+    
+  }
+
+  .LogoGobierno {
+    width:77px;
+    height: 33px;
+    padding-top: 9px;
+    
+  }
+
+  .LogoAndes {
+    width:145px;
+    height: 20px;
+    margin-right: 33px;
+    padding-top: 9px;
+    
+  }
+
+  /* Responsive Styles */
+  @media screen and (max-width: 767px) {
+    .card-container > *:not(.circle-link) ,
+    .terminal {
+      width: 100%;
+    }
+
+    .card:not(.highlight-card) {
+      height: 16px;
+      margin: 8px 0;
+    }
+
+    .card.highlight-card span {
+      margin-left: 72px;
+    }
+
+    svg#rocket-smoke {
+      right: 120px;
+      transform: rotate(-5deg);
+    }
+  }
+
+  @media screen and (max-width: 575px) {
+    svg#rocket-smoke {
+      display: none;
+      visibility: hidden;
+    }
+  }

@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="41" height="41" viewBox="0 0 41 41">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-Mesa_de_trabajo_2);
+      }
+
+      .cls-2 {
+        fill: #334851;
+      }
+
+      .cls-3 {
+        fill: #fff;
+      }
+    </style>
+    <clipPath id="clip-Mesa_de_trabajo_2">
+      <rect width="41" height="41"/>
+    </clipPath>
+  </defs>
+  <g id="Mesa_de_trabajo_2" data-name="Mesa de trabajo – 2" class="cls-1">
+    <rect class="cls-3" width="41" height="41"/>
+    <path id="Trazado_706" data-name="Trazado 706" class="cls-2" d="M340.152,3989.045v.035a1.42,1.42,0,0,1-.507,1.049l-11.841,9.9a1.413,1.413,0,1,1-1.812-2.168l10.606-8.862-10.657-9.823a1.413,1.413,0,0,1,1.914-2.078l11.841,10.913A1.412,1.412,0,0,1,340.152,3989.045Z" transform="translate(-310.985 -3967.518)"/>
+  </g>
+</svg>

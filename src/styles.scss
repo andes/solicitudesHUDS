@@ -1,1 +1,132 @@
 /* You can add global styles to this file, and also import other style files */
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: #FFFFFF; 
+  font-family: 'Manrope';
+  height: 100%;}
+
+body {
+  background-color: #FFFFFF; 
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.page {           
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.spanHeader {
+  color:#FCF2DC;
+  margin-left:33px;
+  font-weight:900;
+}
+
+.content {
+    flex: 1 0 auto;
+    display: flex;
+    margin: 82px auto 0px;
+    padding: 0 16px;
+    max-width: 960px;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+  footer {
+  margin-top: auto;
+  padding-bottom: 0 !important;
+}
+
+@font-face {
+  font-family: 'Manrope-light';
+  src: url('/assets/Font/Manrope-Light.otf') format('OpenType');
+
+}
+
+@font-face {
+  font-family: 'Manrope';
+  src: url('/assets/Font/Manrope-Regular.otf') format('OpenType');
+
+}
+
+@font-face {
+  font-family: 'Manrope-bold';
+  src: url('/assets/Font/Manrope-Bold.otf') format('OpenType');
+
+}
+
+@font-face {
+  font-family: 'Manrope-ExtraBold';
+  src: url('/assets/Font/Manrope-ExtraBold.otf') format('OpenType');
+
+}
+
+:host {
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 8px 0;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  .spacer {
+    flex: 1;
+  }
+
+  .toolbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    background-color: #334851;
+    color: #FCF2DC;
+    font-weight: 600;
+  }
+
+  /* Responsive Styles */
+  @media screen and (max-width: 767px) {
+    .card-container > *:not(.circle-link) ,
+    .terminal {
+      width: 100%;
+    }
+
+    .card:not(.highlight-card) {
+      height: 16px;
+      margin: 8px 0;
+    }
+
+    .card.highlight-card span {
+      margin-left: 72px;
+    }
+
+    svg#rocket-smoke {
+      right: 120px;
+      transform: rotate(-5deg);
+    }
+  }
+
+  @media screen and (max-width: 575px) {
+    svg#rocket-smoke {
+      display: none;
+      visibility: hidden;
+    }
+  }

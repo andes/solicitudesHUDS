@@ -1,0 +1,215 @@
+.MenuPrincipal ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 77px;
+  padding: 0;
+  margin: 0;
+}
+
+.contenedor-a  {  
+  background-color: #334851;
+  width: 199px;
+  height: 44px;
+  border: 3px solid #334851;
+  display: flex;
+  align-items: center;
+
+}
+
+.contenedor-v  {  
+  border: 3px solid #83AC72;
+  width: 199px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+
+}
+
+.step-1{
+  background-color: #334851;
+  width: 30px;
+  height: 44px;
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.step-2{
+  background-color: #83AC72;
+  width: 30px;
+  height: 44px;
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.Texto {
+  color: #FFFFFF;
+  font-family: "Manrope-bold";
+}
+
+.Texto-1 {
+  color: #334851;
+  font-family: "Manrope";
+  padding-left: 13px;
+}
+
+.orden-elementos {
+  display: flex;
+  margin-top: 30px;
+}
+
+.orden-elementos p {
+  padding-top: 6px;
+}
+
+.orden-elementos .botones {
+  display: flex;
+  gap: 6px;
+  margin-left: auto;
+}
+
+.boton-volver {
+  border:none;
+  background-color: #FF0000;
+  color: #FFFFFF;
+  font-family: "Manrope-bold";
+  width: 107px;
+  height: 33px;
+  margin-right: 3px;
+}
+
+.boton-volver:hover {
+  background-color: #BF0000;
+}
+
+.boton-continuar {
+  border:none;
+  background-color: #6A972F;
+  color: #FFFFFF;
+  font-family: "Manrope-bold";
+  width: 107px;
+  height: 33px;
+}
+
+hr {
+background-color: #000000;
+height: 0.5px;
+width: 1400px;
+}
+
+b{
+  font-family: "Manrope-ExtraBold";
+}
+
+.form-contenedor{
+  display: flex;
+  justify-content: center; 
+}
+
+.carga-datos input, label{
+  display: block;
+  
+}
+
+.form {
+  width: 440px;
+  height: 50px;
+  border: 2px solid #83AC72;
+  font-family: "Manrope";
+  font-size: 16px;
+  color: #334851;
+  line-height: 33px;
+  padding-left: 13px;
+  
+}
+
+.Options{
+  width: 100%;
+  height: 50px;
+  border: 2px solid #83AC72;
+  appearance: none;
+  font-family: "Manrope";
+  font-size: 16px;
+  color: #334851;
+  padding: 0 40px 0 12px;
+}
+
+.flecha {
+  width: 30px;
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+
+}
+
+.DropdownOrg, .DropdownDoc {
+  position: relative;
+  width: 100%;
+}
+
+.Options [value=""] {
+  display: none;
+}
+
+.label{
+  font-family: "Manrope-bold";
+  color: #83AC72;
+}
+
+.Parrafo {
+  font-family: "Manrope-bold";
+  color: #334851;
+  font-size: 16px;
+  margin: 33px 0px 33px 0px;
+  text-align: center;
+}
+
+
+.footer-logo {
+  background-color: #FFFFFF;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 9px 10px; 
+  box-sizing: border-box;
+
+
+}
+
+.Logo-Ministerio {
+    width:130px;
+    height: 20px;
+    margin-left: 33px;
+    padding-top: 9px;
+    
+  }
+
+  .Logo-Provincia {
+    width:90px;
+    height: 30px;
+    padding-top: 9px;
+    
+  }
+
+  .Logo-Gobierno {
+    width:77px;
+    height: 33px;
+    padding-top: 9px;
+    
+  }
+
+  .Logo-Andes {
+    width:145px;
+    height: 20px;
+    margin-right: 33px;
+    padding-top: 9px;
+    
+  }

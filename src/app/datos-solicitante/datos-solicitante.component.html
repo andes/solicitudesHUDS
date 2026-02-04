@@ -1,0 +1,109 @@
+<nav class="MenuPrincipal">
+  <ul class="MenuListado">
+    <li class="contenedor-a">
+       <span class="step-1">1</span>
+       <span class="Texto">Datos del solicitante</span> 
+    </li>
+    
+<div class="Flecha-Menu">
+   <img class="flechaMenu" src="assets/Logos/flecha.huds.svg" alt="flecha"/>
+</div>
+
+    <li class="contenedor-v">
+       <span class="step-2">2</span>
+       <span class="Texto-1">Datos del paciente</span> 
+    </li>
+
+<div class="Flecha-Menu">
+   <img class="flechaMenu" src="assets/Logos/flecha.huds.svg" alt="flecha"/>
+</div>
+
+    <li class="contenedor-v">
+       <span class="step-2">3</span>
+       <span class="Texto-1">Descripción</span> 
+    </li>
+
+<div class="Flecha-Menu">
+   <img class="flechaMenu" src="assets/Logos/flecha.huds.svg" alt="flecha"/>
+</div>
+
+    <li class="contenedor-v">
+        <span class="step-2">4</span>
+       <span class="Texto-1">Carga de adjuntos</span> 
+    </li>
+
+  </ul>
+</nav>
+
+<div class="orden-elementos">
+  <p>Ingresá tus <b>datos personales</b> para continuar con el pedido</p>
+ <div class="botones">
+    <button class="boton-volver" type="button">VOLVER</button>
+    <button class="boton-continuar" (click)= "goto()" type="button">CONTINUAR</button> 
+ </div>
+</div>
+<hr>
+
+<div class="form-contenedor">
+<form name="carga-datos">
+  <label class="label">Nombre <span style="color:#E00713">*</span>:</label>
+     <input class="form" type="text" name="Nombre" required>
+  <label class="label">Apellido <span style="color:#E00713">*</span>:</label>
+     <input class="form" type="text" name="Apellido" required>
+  <label class="label">Tipo de documento <span style="color:#E00713">*</span>:</label>
+
+<div class="DropdownDoc">
+  <img class=flecha src="assets/Logos/menu-down.svg" alt="Flecha"/>
+  <select name="opciones" class="Options">
+      <option value=""></option>
+      <option value="DNI">DNI</option>
+      <option value="Pasaporte">Pasaporte</option>
+   </select>
+</div>
+
+  <label class="label">Nº de documento <span style="color:#E00713">*</span>: </label>
+     <input class="form" type="text" name="Número de documento" required>
+  <label class="label">Email <span style="color:#E00713">*</span>: </label>
+     <input class="form" type="text" name="Email" required>
+  <label class="label">Teléfono <span style="color:#E00713">*</span>: </label>
+     <input class="form" type="number" name="Teléfono" required>
+  <label class="label">Organismo <span style="color:#E00713">*</span>: </label>
+     
+<div class="DropdownOrg">
+   <img class=flecha src="assets/Logos/menu-down.svg" alt="Flecha"/>
+  <select name="Organismo" class="Options">
+      <option value=""></option>
+      <option value="Juzgado Nº 1">Juzgado Nº 1</option>
+      <option value="Juzgado Nº 2">Juzgado Nº 2</option>
+      <option value="Juzgado Nº 3">Juzgado Nº 3</option>
+      <option value="Abogado particular">Abogado particular</option>
+      <option value="Otro">Otro</option>
+   </select>
+</div>
+
+</form>
+</div>
+
+
+<div class="Parrafo">
+<p class="parrafoImp">Importante: En el email confirmado se enviará la información correspondiente al concluir el proceso.</p>
+</div>
+
+
+
+<footer class="FooterDatos">
+  <div class="footer-logo">
+    <div class="Logo-Ministerio"> 
+      <img src="assets/Logos/logos-06.svg" alt="Logo Ministerio"/>
+    </div>
+    <div class="Logo-Provincia">
+      <img src="assets/Logos/logos-07.svg" alt="Logo provincia"/>
+    </div>
+    <div class="Logo-Gobierno"> 
+      <img src="assets/Logos/logos-08.svg" alt="Logo gobierno"/>
+    </div> 
+    <div class="Logo-Andes">
+      <img src="assets/Logos/logos-09.svg" alt="Logo andes"/>
+    </div> 
+  </div>
+</footer>

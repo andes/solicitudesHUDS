@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Capa_1" data-name="Capa 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 72 72">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #83ac72;
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #83ac72;
+        stroke-miterlimit: 10;
+        stroke-width: 1.5px;
+      }
+    </style>
+  </defs>
+  <g id="Icono_confirmación" data-name="Icono confirmación">
+    <circle id="Elipse_1" data-name="Elipse 1" class="cls-2" cx="36" cy="36" r="35.25"/>
+    <path id="Trazado_88" data-name="Trazado 88" class="cls-1" d="M32.0355,49.1254c-.6341,0-1.2417-.253-1.6876-.7033l-10.4249-10.5312c-.9232-.9323-.916-2.4366.0159-3.3603.9323-.9232,2.4371-.916,3.3603.0164l8.6069,8.695,16.677-19.5317c.8515-.9978,2.3501-1.1166,3.3478-.2651s1.1166,2.3501.2651,3.3478l-18.354,21.4978c-.431.5061-1.055.8082-1.7194.8327-.0293.0019-.0577.0019-.0871.0019Z"/>
+  </g>
+</svg>
