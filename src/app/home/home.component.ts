@@ -1,21 +1,25 @@
-import { Component, ViewEncapsulation } from '@angular/core';
+import { Component, OnInit, OnDestroy, ViewEncapsulation } from '@angular/core';
 import { Router } from '@angular/router';
 
-
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss'],
-  encapsulation: ViewEncapsulation.None
-
+    selector: 'app-home',
+    templateUrl: './home.component.html',
+    styleUrls: ['./home.component.scss'],
+    encapsulation: ViewEncapsulation.None
 })
-export class HomeComponent {
-  
-  constructor(private router: Router) {}
+export class HomeComponent implements OnInit, OnDestroy {
 
-  iniciar() {
-  this.router.navigate(['/solicitante']);
-}
+    constructor(private router: Router) { }
 
+    ngOnInit(): void {
+        document.body.style.backgroundColor = '#FCF2DC';
+    }
 
+    ngOnDestroy(): void {
+        document.body.style.backgroundColor = '#FFFFFF';
+    }
+
+    iniciar() {
+        this.router.navigate(['/solicitante']);
+    }
 }
