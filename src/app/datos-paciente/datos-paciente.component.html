@@ -1,75 +1,86 @@
-<body class="layout">
-    <nav class="MenuPrincipal">
-        <ul class="MenuListado">
-            <li class="contenedor-v">
-                <span class="step-2">1</span>
-                <span class="Texto-1">Datos del solicitante</span>
-            </li>
+<nav aria-label="Progreso de la solicitud">
+    <ol class="MenuPrincipal">
+        <li class="MenuPrincipal__step">
+            <span class="MenuPrincipal__circulo">1</span>
+            <span class="MenuPrincipal__label">Datos del solicitante</span>
+        </li>
 
-            <div class="Flecha-Menu">
-                <img class="flechaMenu" src="assets/Logos/flecha.huds.svg" alt="flecha" />
-            </div>
+        <li class="MenuPrincipal__step" aria-current="step">
+            <span class="MenuPrincipal__circulo">2</span>
+            <span class="MenuPrincipal__label">Datos del paciente</span>
+        </li>
 
-            <li class="contenedor-a">
-                <span class="step-1">2</span>
-                <span class="Texto">Datos del paciente</span>
-            </li>
+        <li class="MenuPrincipal__step">
+            <span class="MenuPrincipal__circulo">3</span>
+            <span class="MenuPrincipal__label">Descripción</span>
+        </li>
 
-            <div class="Flecha-Menu">
-                <img class="flechaMenu" src="assets/Logos/flecha.huds.svg" alt="flecha" />
-            </div>
+        <li class="MenuPrincipal__step">
+            <span class="MenuPrincipal__circulo">4</span>
+            <span class="MenuPrincipal__label">Carga de adjuntos</span>
+        </li>
+    </ol>
+</nav>
 
-            <li class="contenedor-v">
-                <span class="step-2">3</span>
-                <span class="Texto-1">Descripción</span>
-            </li>
+<hr class="linea-personalizada">
 
-            <div class="Flecha-Menu">
-                <img class="flechaMenu" src="assets/Logos/flecha.huds.svg" alt="flecha" />
-            </div>
-
-            <li class="contenedor-v">
-                <span class="step-2">4</span>
-                <span class="Texto-1">Carga de adjuntos</span>
-            </li>
-        </ul>
-    </nav>
-
-    <div class="orden-elementos">
-        <p>Ingresá los <b>datos del paciente</b></p>
-        <div class="botones">
-            <button class="boton-volver" type="button">VOLVER</button>
-            <button class="boton-continuar" (click)="goto()" type="button">CONTINUAR</button>
-        </div>
+<!-- <div class="botones">
+        <button class="boton-volver" type="button">VOLVER</button>
+        <button class="boton-continuar" (click)="goto()" type="button">CONTINUAR</button>
     </div>
-    <hr>
+</div>
+<hr>-->
 
+<div class="grid-form-contenedor">
+    <div class="orden-elementos">
+        <div class="elemento1"><b>Paso 2 de 4</b></div>
+        <div class="elemento2"><b>Datos del paciente</b></div>
+        <div class="elemento3">Ingresá la información correspondiente</div>
+    </div>
+    <div class="botones">
+        <button class="boton-volver" type="button">VOLVER</button>
+        <button class="boton-continuar" (click)="goto()" type="button">CONTINUAR</button>
+    </div>
 
-    <main class="Formulario">
-        <div class="form-contenedor">
-            <form name="carga-datos">
-                <label class="label">Nombre <span style="color:#E00713">*</span>:</label>
-                <input class="form" type="text" name="Nombre" required>
-                <label class="label">Apellido <span style="color:#E00713">*</span>:</label>
-                <input class="form" type="text" name="Apellido" required>
-                <label class="label">Documento <span style="color:#E00713">*</span>: </label>
-                <input class="form" type="text" name="Número de documento" required>
-                <label class="label">Fecha de nacimiento <span style="color:#E00713">*</span>: </label>
-                <input class="form" type="text" name="Fecha de nacimiento" required>
-                <label class="label">Sexo <span style="color:#E00713">*</span>: </label>
+    <form class="carga-datos-izquierda" name="carga-datos">
 
-                <div class="DropdownOrg">
-                    <div class="SelectWrapper">
-                        <img class=flecha src="assets/Logos/menu-down.svg" alt="Flecha" />
-                        <select name="Sexo" class="Options">
-                            <option value=""></option>
-                            <option value="Femenino">Femenino</option>
-                            <option value="Masculino">Masculino</option>
-                            <option value="No binario">No binario</option>
-                        </select>
-                    </div>
-                </div>
-
-            </form>
+        <div class="form-row">
+            <label class="label">Nombre <span style="color:#E00713">*</span>:</label>
+            <input class="form" type="text" name="Nombre" required>
         </div>
-    </main>
+
+        <div class="form-row">
+            <label class="label">Documento <span style="color:#E00713">*</span>:</label>
+            <input class="form" type="text" name="Documento" required>
+        </div>
+
+        <div class="form-row">
+            <label class="label">Sexo <span style="color:#E00713">*</span>: </label>
+            <div class="DropdownSexo">
+                <img class="flecha" src="assets/Logos/menu-down.svg" alt="Flecha" />
+                <select name="Sexo" class="Options">
+                    <option value=""></option>
+                    <option value="Masculino">Masculino</option>
+                    <option value="Femenino">Femenino</option>
+                    <option value="No binario">No binario</option>
+                </select>
+            </div>
+        </div>
+
+    </form>
+
+    <form class="carga-datos-derecha" name="carga-datos">
+
+        <div class="form-row">
+            <label class="label">Apellido <span style="color:#E00713">*</span>:</label>
+            <input class="form" type="text" name="Apellido" required>
+        </div>
+
+        <div class="form-row">
+            <label class="label">Fecha de nacimiento <span style="color:#E00713">*</span>: </label>
+            <input class="form" type="text" name="Fecha de nacimiento" required>
+        </div>
+
+    </form>
+
+</div>
