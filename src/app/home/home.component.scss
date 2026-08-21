@@ -1,3 +1,5 @@
+@import 'src/styles/breakpoints';
+
 :host {
     box-sizing: border-box;
     -webkit-font-smoothing: antialiased;
@@ -46,6 +48,27 @@ span {
     align-items: center;
 }
 
+.ver-mas-container {
+    display: inline; 
+}
+
+.ver-mas-btn {
+    display: inline;
+    text-decoration: underline;
+    cursor: pointer;
+    list-style: none;
+    font-family: "Manrope-bold";
+}
+
+.ver-mas-btn::-webkit-details-marker {
+    display: none;
+}
+
+.texto-oculto {
+    display: block; 
+    line-height: 1.5;
+}
+
 .TextoIntro {
     text-align: center;
     margin-bottom: 33px;
@@ -67,7 +90,6 @@ span {
     max-width: 960px;
     flex-direction: column;
     align-items: center;
-    //border: 2px solid #1976d2;
 }
 
 .card-container {
@@ -103,32 +125,71 @@ span {
     box-shadow: 0 4px 13px #334851;
 }
 
-/* Responsive Styles */
-@media screen and (max-width: 767px) {
-
-    .card-container>*:not(.circle-link),
-    .terminal {
-        width: 100%;
+//LG:991px 
+@include lg {
+    h1.TituloPrincipal {
+        font-size: 42px;
     }
 
-    .card:not(.highlight-card) {
-        height: 16px;
-        margin: 8px 0;
+    .TextoIntro {
+        font-size: 17px;
     }
 
-    .card.highlight-card span {
-        margin-left: 72px;
-    }
-
-    svg#rocket-smoke {
-        right: 120px;
-        transform: rotate(-5deg);
+    .TextoLargo {
+        font-size: 15px;
     }
 }
 
-@media screen and (max-width: 575px) {
-    svg#rocket-smoke {
-        display: none;
-        visibility: hidden;
+// MD: 767px
+@include md {
+    .LogoHuds {
+        width: 70px;
+        height: 50px;
+        margin: 10px auto;
+    }
+
+    h1.TituloPrincipal {
+        font-size: 34px;
+        margin-bottom: 6px;
+    }
+
+    .TextoIntro {
+        font-size: 16px;
+        margin-bottom: 24px;
+    }
+
+    .TextoLargo {
+        font-size: 14px;
+        margin-bottom: 28px;
+    }
+}
+
+//SM: 575px
+@include sm {
+    .LogoHuds {
+        width: 60px;
+        height: 44px;
+        margin: 8px auto;
+    }
+
+    h1.TituloPrincipal {
+        font-size: 26px;
+        margin-bottom: 4px;
+    }
+
+    .TextoIntro {
+        font-size: 15px;
+        margin-bottom: 20px;
+        line-height: 1.4;
+    }
+
+    .TextoLargo {
+        font-size: 13px;
+        margin-bottom: 24px;
+        line-height: 1.6;
+    }
+
+    .card-container {
+        margin-top: 12px;
     }
 }

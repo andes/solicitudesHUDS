@@ -1,3 +1,5 @@
+@import 'src/styles/breakpoints';
+
 nav[aria-label="Progreso de la solicitud"] {
     display: block;
     width: 100%;
@@ -25,7 +27,6 @@ nav[aria-label="Progreso de la solicitud"] {
 
 .MenuPrincipal__circulo {
     position: relative;
-    z-index: 1; // para que quede por encima de la línea
     width: 66px;
     height: 66px;
     border-radius: 50%;
@@ -39,7 +40,7 @@ nav[aria-label="Progreso de la solicitud"] {
     color: #83AC72;
 }
 
-// El texto debajo del círculo
+//texto debajo del círculo
 .MenuPrincipal__label {
     margin-top: 12px;
     font-family: "Manrope";
@@ -212,4 +213,135 @@ hr {
     font-family: "Manrope-bold";
     font-size: 10px;
     color: #334851;
+}
+
+//LG:991px 
+@include lg {
+
+  .MenuPrincipal__label {
+    font-size: 14px;
+    white-space: normal;
+  }
+
+  .MenuPrincipal__circulo {
+    width: 52px;
+    height: 52px;
+    font-size: 17px;
+  }
+}
+
+// MD: 767px
+@include md {
+
+  .MenuPrincipal__circulo {
+    width: 44px;
+    height: 44px;
+    font-size: 15px;
+  }
+
+  .MenuPrincipal__label {
+    font-size: 12px;
+    white-space: normal;
+  }
+
+  .grid-form-contenedor {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+
+  .orden-elementos    { grid-column: 1; grid-row: 1; }
+  .botones            { grid-column: 1; grid-row: 2; justify-self: start; }
+  .carga-de-archivos  { grid-column: 1; grid-row: 3; }
+
+ 
+  .espacio-carga {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 420px;
+    height: auto;
+    min-height: 160px;
+  }
+
+  .elemento2 { font-size: 22px; }
+}
+
+// SM:575px 
+@include sm {
+
+  .MenuPrincipal__label {
+    display: none;
+  }
+
+  .MenuPrincipal__circulo {
+    width: 44px;
+    height: 44px;
+    font-size: 15px;
+  }
+
+  .MenuPrincipal__step {
+    flex: 1;
+  }
+
+  // Grid 
+  .grid-form-contenedor {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+
+  .orden-elementos    { grid-column: 1; grid-row: 1; }
+  .carga-de-archivos  { grid-column: 1; grid-row: 2; }
+
+  .botones {
+    grid-column: 1;
+    grid-row: 3;
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    width: 100%;
+    justify-self: stretch;
+  }
+
+  .boton-volver {
+    flex: 1;
+    height: 44px;
+    margin-right: 0;
+    background-color: transparent;
+    border: 2px solid #FF0000;
+    color: #FF0000;
+  }
+
+  .boton-volver:hover {
+    background-color: #FFF0F0;
+  }
+
+  .boton-continuar {
+    flex: 1;
+    height: 44px;
+  }
+
+  .espacio-carga {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    min-height: 140px;
+    padding: 20px;
+  }
+
+  .boton-carga {
+    width: 100%;
+    max-width: 280px;
+    height: 44px;
+  }
+
+  .elemento2 { font-size: 20px; }
+  .elemento3 { font-size: 14px; }
+}
+
+// 380px
+@media (max-width: 380px) {
+  .boton-carga {
+    max-width: 266px;
+    height: 42px; 
+  }
 }

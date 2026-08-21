@@ -1,0 +1,10 @@
+//breakpoints.scss 
+$bp-xl: 1199px;
+$bp-lg:  991px;
+$bp-md:  767px;
+$bp-sm:  575px;
+
+@mixin xl { @media (max-width: #{$bp-xl}) { @content; } }
+@mixin lg { @media (max-width: #{$bp-lg}) { @content; } }
+@mixin md { @media (max-width: #{$bp-md}) { @content; } }
+@mixin sm { @media (max-width: #{$bp-sm}) { @content; } }
