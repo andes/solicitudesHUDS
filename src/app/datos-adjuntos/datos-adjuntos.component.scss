@@ -1,218 +1,230 @@
 @import 'src/styles/breakpoints';
 
 nav[aria-label="Progreso de la solicitud"] {
-    display: block;
-    width: 100%;
-    box-sizing: border-box;
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 20px;
 }
 
 .MenuPrincipal {
-    display: flex;
-    padding: 0;
-    margin: 0;
-    width: 100%;
-    align-items: flex-start;
-    max-width: 100%
+  display: flex;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  align-items: flex-start;
+  max-width: 100%
 }
 
 .MenuPrincipal__step {
-    position: relative;
-    display: flex;
-    flex: 0 0 25%;
-    flex-shrink: 0;
-    flex-direction: column;
-    align-items: center;
+  position: relative;
+  display: flex;
+  flex: 0 0 25%;
+  flex-shrink: 0;
+  flex-direction: column;
+  align-items: center;
 
 }
 
 .MenuPrincipal__circulo {
-    position: relative;
-    width: 66px;
-    height: 66px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: "Manrope-bold";
-    font-size: 21px;
-    background-color: #FFFFFF;
-    border: 3px solid #83AC72;
-    color: #83AC72;
+  position: relative;
+  width: 66px;
+  height: 66px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Manrope-bold";
+  font-size: 21px;
+  background-color: #FFFFFF;
+  border: 3px solid #83AC72;
+  color: #83AC72;
 }
 
 //texto debajo del círculo
 .MenuPrincipal__label {
-    margin-top: 12px;
-    font-family: "Manrope";
-    font-size: 18px;
-    color: #4F6B42;
-    text-align: center;
-    padding: 0 8px;
-    white-space: nowrap;
+  margin-top: 12px;
+  font-family: "Manrope";
+  font-size: 18px;
+  color: #4F6B42;
+  text-align: center;
+  padding: 0 8px;
+  white-space: nowrap;
 }
 
 .MenuPrincipal__step[aria-current="step"] {
-    .MenuPrincipal__circulo {
-        background-color: #334851;
-        border-color: #334851;
-        color: #FFFFFF;
-    }
+  .MenuPrincipal__circulo {
+    background-color: #334851;
+    border-color: #334851;
+    color: #FFFFFF;
+  }
 
-    .MenuPrincipal__label {
-        color: #334851;
-        font-weight: 700;
-    }
+  .MenuPrincipal__label {
+    color: #334851;
+    font-weight: 700;
+  }
 }
 
 .linea-personalizada {
-    border: none;
-    height: 1.5px;
-    width: 100%;
-    background-color: #CBCBCB;
-    margin-top: 40px;
+  border: none;
+  height: 1.5px;
+  width: 100%;
+  background-color: #CBCBCB;
+  margin-top: 20px;
 }
 
 .grid-form-contenedor {
-    display: grid;
-    margin-top: 30px;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    grid-template-rows: auto auto;
-    width: 100%;
-    max-width: 100%;
-    box-sizing: border-box;
-    justify-content: center;
-    row-gap: 20px;
+  display: grid;
+  margin-top: 30px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-rows: auto auto;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  justify-content: center;
+  row-gap: 20px;
 }
 
 .orden-elementos {
-    grid-column-start: 1;
-    grid-column-end: 1;
-    grid-row-start: 1;
-    grid-row-end: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 3px;
+  grid-column-start: 1;
+  grid-column-end: 1;
+  grid-row-start: 1;
+  grid-row-end: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
 }
 
 .orden-elementos .elemento1 {
-    color: #83AC72;
-    font-size: 16px;
+  color: #83AC72;
+  font-size: 16px;
 }
 
 .elemento2 {
-    color: #334851;
-    font-size: 26px;
+  color: #334851;
+  font-size: 26px;
 }
 
 .elemento3 {
-    font-size: 16px;
+  font-size: 16px;
 }
 
 b {
-    font-family: "Manrope-ExtraBold";
+  font-family: "Manrope-ExtraBold";
 }
 
 .botones {
-    grid-column-start: 2;
-    grid-column-end: 2;
-    grid-row-start: 1;
-    grid-row-end: 1;
-    display: flex;
-    gap: 6px;
-    justify-self: end;
-    align-self: center;
+  grid-column-start: 2;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 1;
+  display: flex;
+  gap: 6px;
+  justify-self: end;
+  align-self: center;
 }
 
+// .boton-volver {
+//   border: none;
+//   border-radius: 10px;
+//   background-color: #FF0000;
+//   color: #FFFFFF;
+//   font-family: "Manrope-bold";
+//   width: 107px;
+//   height: 33px;
+//   margin-right: 9px;
+// }
+
 .boton-volver {
-    border: none;
-    border-radius: 10px;
-    background-color: #FF0000;
-    color: #FFFFFF;
-    font-family: "Manrope-bold";
-    width: 107px;
-    height: 33px;
-    margin-right: 3px;
+  background-color: transparent;
+  border: 2px solid #FF0000;
+  color: #FF0000;
+  border-radius: 10px;
+  font-family: "Manrope-bold";
+  width: 107px;
+  height: 33px;
+  margin-right: 9px;
 }
 
 .boton-volver:hover {
-    background-color: #BF0000;
+  background-color: #BF0000;
 }
 
 .boton-continuar {
-    border: none;
-    border-radius: 10px;
-    background-color: #8CC63F;
-    color: #FFFFFF;
-    font-family: "Manrope-bold";
-    width: 107px;
-    height: 33px;
+  border: none;
+  border-radius: 10px;
+  background-color: #8CC63F;
+  color: #FFFFFF;
+  font-family: "Manrope-bold";
+  width: 107px;
+  height: 33px;
 }
 
 hr {
-    background-color: #000000;
-    height: 0.5px;
-    width: 1400px;
+  background-color: #000000;
+  height: 0.5px;
+  width: 1400px;
 }
 
 
 .label {
-    font-family: "Manrope-bold";
-    color: #83AC72;
+  font-family: "Manrope-bold";
+  color: #83AC72;
 }
 
 
 .carga-de-archivos {
-    grid-column-start: 1;
-    grid-column-end: 3;
-    grid-row-start: 2;
-    grid-row-end: 2;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column
 }
 
 .espacio-carga {
-    width: 420px;
-    height: 160px;
-    border: 5px dashed #83AC72;
-    padding: 30px;
-    border-radius: 3px;
-    background-color: #FFFFF8;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 12px;
-    margin-top: 20px;
+  width: 420px;
+  height: 160px;
+  border: 5px dashed #83AC72;
+  padding: 30px;
+  border-radius: 3px;
+  background-color: #FFFFF8;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin-top: 20px;
 }
 
 .Texto-carga-p {
-    font-family: "Manrope";
-    font-size: 16px;
-    text-align: center;
+  font-family: "Manrope";
+  font-size: 16px;
+  text-align: center;
 }
 
 .boton-carga {
-    width: 160px;
-    height: 33px;
-    background-color: #334851;
-    color: #ffffff;
-    border: none;
-    border-radius: 6px;
-    font-family: "Manrope-bold";
+  width: 160px;
+  height: 33px;
+  background-color: #334851;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  font-family: "Manrope-bold";
 }
 
 .boton-carga:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 4px 13px #334851;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 13px #334851;
 }
 
 .tipo-carga {
-    font-family: "Manrope-bold";
-    font-size: 10px;
-    color: #334851;
+  font-family: "Manrope-bold";
+  font-size: 10px;
+  color: #334851;
 }
 
 //LG:991px 
@@ -249,11 +261,23 @@ hr {
     grid-template-rows: auto;
   }
 
-  .orden-elementos    { grid-column: 1; grid-row: 1; }
-  .botones            { grid-column: 1; grid-row: 2; justify-self: start; }
-  .carga-de-archivos  { grid-column: 1; grid-row: 3; }
+  .orden-elementos {
+    grid-column: 1;
+    grid-row: 1;
+  }
 
- 
+  .botones {
+    grid-column: 1;
+    grid-row: 2;
+    justify-self: start;
+  }
+
+  .carga-de-archivos {
+    grid-column: 1;
+    grid-row: 3;
+  }
+
+
   .espacio-carga {
     box-sizing: border-box;
     width: 100%;
@@ -262,7 +286,9 @@ hr {
     min-height: 160px;
   }
 
-  .elemento2 { font-size: 22px; }
+  .elemento2 {
+    font-size: 22px;
+  }
 }
 
 // SM:575px 
@@ -288,8 +314,15 @@ hr {
     grid-template-rows: auto;
   }
 
-  .orden-elementos    { grid-column: 1; grid-row: 1; }
-  .carga-de-archivos  { grid-column: 1; grid-row: 2; }
+  .orden-elementos {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .carga-de-archivos {
+    grid-column: 1;
+    grid-row: 2;
+  }
 
   .botones {
     grid-column: 1;
@@ -302,12 +335,14 @@ hr {
   }
 
   .boton-volver {
-    flex: 1;
-    height: 44px;
-    margin-right: 0;
     background-color: transparent;
     border: 2px solid #FF0000;
     color: #FF0000;
+    border-radius: 10px;
+    font-family: "Manrope-bold";
+    width: 107px;
+    height: 33px;
+    margin-right: 9px;
   }
 
   .boton-volver:hover {
@@ -316,7 +351,7 @@ hr {
 
   .boton-continuar {
     flex: 1;
-    height: 44px;
+    // height: 44px;
   }
 
   .espacio-carga {
@@ -334,14 +369,19 @@ hr {
     height: 44px;
   }
 
-  .elemento2 { font-size: 20px; }
-  .elemento3 { font-size: 14px; }
+  .elemento2 {
+    font-size: 20px;
+  }
+
+  .elemento3 {
+    font-size: 14px;
+  }
 }
 
 // 380px
 @media (max-width: 380px) {
   .boton-carga {
     max-width: 266px;
-    height: 42px; 
+    height: 42px;
   }
 }

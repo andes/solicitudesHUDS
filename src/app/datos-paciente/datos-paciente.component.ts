@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-datos-paciente',
@@ -8,9 +9,13 @@ import { Router } from '@angular/router';
 })
 export class DatosPacienteComponent {
 
-    constructor(private router: Router) {}
+    constructor(private router: Router, private location: Location) {}
     
     goto() {
     this.router.navigate(['/descripcion']);
+  }
+
+  vuelve() {
+    this.location.back();
   }
 }

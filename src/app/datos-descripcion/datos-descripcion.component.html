@@ -31,46 +31,65 @@
         <div class="elemento3">Completa los siguientes campos detallando <b>el pedido</b></div>
     </div>
     <div class="botones">
-        <button class="boton-volver" type="button">VOLVER</button>
+        <button class="boton-volver" type="button" (click)="vuelve()">VOLVER</button>
         <button class="boton-continuar" (click)="goto()" type="button">CONTINUAR</button>
     </div>
 
 
     <form class="carga-datos-izquierda" name="carga-datos">
         <div class="form-row">
-            <label class="label">Institución<span style="color:#E00713">*</span>: </label>
-            <div class="DropdownOrg">
-                <img class="flecha" src="assets/Logos/menu-down.svg" alt="Flecha" />
-                <select name="Institución" class="Options">
-                    <option value=""></option>
-                    <option value="HTAL1">HTAL PROV NEUQUÉN - DR EDUARDO CASTRO RENDÓN</option>
-                    <option value="HTAL2">HTAL HELLER - DR HORACIO BURD</option>
-                    <option value="HTAL3">HTAL BOUQUET ROLDAN</option>
-                    <option value="HTAL4">HTAL CENTENARIO - DR NATALIO BURD</option>
-                    <option value="HTAL5">HTAL SENILLOSA</option>
-                    <option value="SUBSECRETERIA DE SALUD">SUBSECRETERIA DE SALUD</option>
-                    <option value="CDS">CENTRO DE SALUD</option>
-
-                </select>
+            <label class="label" id="institution-label">Institución<span style="color:#E00713">*</span>: </label>
+            <div class="DropdownOrg custom-select" [class.is-open]="openDropdown === 'institution'">
+                <input type="hidden" name="Institución" [value]="selectedInstitution">
+                <button
+                    id="institution-select"
+                    class="custom-select__trigger"
+                    type="button"
+                    aria-labelledby="institution-label institution-select"
+                    aria-haspopup="listbox"
+                    [attr.aria-expanded]="openDropdown === 'institution'"
+                    (click)="toggleDropdown('institution')">
+                    <span class="custom-select__value" [class.is-placeholder]="!selectedInstitution" [title]="getOptionLabel(institutions, selectedInstitution)">
+                        {{ getOptionLabel(institutions, selectedInstitution) || 'Seleccione una institución' }}
+                    </span>
+                    <img class="flecha" src="assets/Logos/menu-down.svg" alt="" />
+                </button>
+                <ul class="custom-select__menu" role="listbox" aria-labelledby="institution-label" *ngIf="openDropdown === 'institution'">
+                    <li *ngFor="let institution of institutions" role="option" [attr.aria-selected]="selectedInstitution === institution.value">
+                        <button type="button" [title]="institution.label" (click)="selectOption('institution', institution.value)">
+                            {{ institution.label }}
+                        </button>
+                    </li>
+                </ul>
             </div>
         </div>
     </form>
 
     <form class="carga-datos-derecha" name="carga-datos">
         <div class="form-row">
-            <label class="label">Seleccione efector<span style="color:#E00713">*</span>: </label>
-            <div class="DropdownEfe">
-                <img class="flecha" src="assets/Logos/menu-down.svg" alt="Flecha" />
-                <select name="Institución" class="Options">
-                    <option value=""></option>
-                    <option value="Efector1">HTAL PROV NEUQUÉN - DR EDUARDO CASTRO RENDÓN</option>
-                    <option value="Efector2">HTAL HELLER - DR HORACIO BURD</option>
-                    <option value="Efector3">HTAL BOUQUET ROLDAN</option>
-                    <option value="Efector4">HTAL CENTENARIO - DR NATALIO BURD</option>
-                    <option value="Efector5">HTAL SENILLOSA</option>
-                    <option value="Efector6">SUBSECRETERIA DE SALUD</option>
-                    <option value="Efector7">CENTRO DE SALUD</option>
-                </select>
+            <label class="label" id="efector-label">Seleccione efector<span style="color:#E00713">*</span>: </label>
+            <div class="DropdownEfe custom-select" [class.is-open]="openDropdown === 'efector'">
+                <input type="hidden" name="Efector" [value]="selectedEfector">
+                <button
+                    id="efector-select"
+                    class="custom-select__trigger"
+                    type="button"
+                    aria-labelledby="efector-label efector-select"
+                    aria-haspopup="listbox"
+                    [attr.aria-expanded]="openDropdown === 'efector'"
+                    (click)="toggleDropdown('efector')">
+                    <span class="custom-select__value" [class.is-placeholder]="!selectedEfector" [title]="getOptionLabel(efectores, selectedEfector)">
+                        {{ getOptionLabel(efectores, selectedEfector) || 'Seleccione un efector' }}
+                    </span>
+                    <img class="flecha" src="assets/Logos/menu-down.svg" alt="" />
+                </button>
+                <ul class="custom-select__menu" role="listbox" aria-labelledby="efector-label" *ngIf="openDropdown === 'efector'">
+                    <li *ngFor="let efector of efectores" role="option" [attr.aria-selected]="selectedEfector === efector.value">
+                        <button type="button" [title]="efector.label" (click)="selectOption('efector', efector.value)">
+                            {{ efector.label }}
+                        </button>
+                    </li>
+                </ul>
             </div>
         </div>
 

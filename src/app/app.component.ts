@@ -16,7 +16,9 @@ export class AppComponent implements OnInit {
         this.router.events.pipe(
             filter(event => event instanceof NavigationEnd)
         ).subscribe((event: any) => {
-            this.isHome = event.urlAfterRedirects === '/home' || event.urlAfterRedirects === '/';
+            this.isHome =
+                event.urlAfterRedirects === '/home' ||
+                event.urlAfterRedirects === '/';
         });
     }
 }

@@ -1,258 +1,343 @@
 @import 'src/styles/breakpoints';
 
 nav[aria-label="Progreso de la solicitud"] {
-    display: block;
-    width: 100%;
-    box-sizing: border-box;
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 20px;
 }
 
 .MenuPrincipal {
-    display: flex;
-    padding: 0;
-    margin: 0;
-    width: 100%;
-    align-items: flex-start;
-    max-width: 100%
+  display: flex;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  align-items: flex-start;
+  max-width: 100%
 }
 
 .MenuPrincipal__step {
-    position: relative;
-    display: flex;
-    flex: 0 0 25%;
-    flex-shrink: 0;
-    flex-direction: column;
-    align-items: center;
+  position: relative;
+  display: flex;
+  flex: 0 0 25%;
+  flex-shrink: 0;
+  flex-direction: column;
+  align-items: center;
 
 }
 
 .MenuPrincipal__circulo {
-    position: relative;
-    width: 66px;
-    height: 66px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: "Manrope-bold";
-    font-size: 21px;
-    background-color: #FFFFFF;
-    border: 3px solid #83AC72;
-    color: #83AC72;
+  position: relative;
+  width: 66px;
+  height: 66px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Manrope-bold";
+  font-size: 21px;
+  background-color: #FFFFFF;
+  border: 3px solid #83AC72;
+  color: #83AC72;
 }
 
 //texto debajo del círculo
 .MenuPrincipal__label {
-    margin-top: 12px;
-    font-family: "Manrope";
-    font-size: 18px;
-    color: #4F6B42;
-    text-align: center;
-    padding: 0 8px;
-    white-space: nowrap;
+  margin-top: 12px;
+  font-family: "Manrope";
+  font-size: 18px;
+  color: #4F6B42;
+  text-align: center;
+  padding: 0 8px;
+  white-space: nowrap;
 }
 
 .MenuPrincipal__step[aria-current="step"] {
-    .MenuPrincipal__circulo {
-        background-color: #334851;
-        border-color: #334851;
-        color: #FFFFFF;
-    }
+  .MenuPrincipal__circulo {
+    background-color: #334851;
+    border-color: #334851;
+    color: #FFFFFF;
+  }
 
-    .MenuPrincipal__label {
-        color: #334851;
-        font-weight: 700;
-    }
+  .MenuPrincipal__label {
+    color: #334851;
+    font-weight: 700;
+  }
 }
 
 .linea-personalizada {
-    border: none;
-    height: 1.5px;
-    width: 100%;
-    background-color: #CBCBCB;
-    margin-top: 40px;
+  border: none;
+  height: 1.5px;
+  width: 100%;
+  background-color: #CBCBCB;
+  margin-top: 20px;
 }
 
 .orden-elementos {
-    display: flex;
-    flex-direction: column;
-    gap: 3px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
 
 }
 
 .orden-elementos .elemento1 {
-    color: #83AC72;
-    font-size: 16px;
+  color: #83AC72;
+  font-size: 16px;
 }
 
 .elemento2 {
-    color: #334851;
-    font-size: 26px;
+  color: #334851;
+  font-size: 26px;
 }
 
 .elemento3 {
-    font-size: 16px;
+  font-size: 16px;
 }
 
 .grid-form-contenedor {
-    display: grid;
-    margin-top: 30px;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    grid-template-rows: auto auto auto 61px;
-    width: 100%;
-    max-width: 100%;
-    box-sizing: border-box;
-    justify-content: center;
-    column-gap: 30px;
-    row-gap: 20px;
+  display: grid;
+  margin-top: 30px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-rows: auto auto auto 61px;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  justify-content: center;
+  column-gap: 30px;
+  row-gap: 20px;
 }
 
 .carga-datos-izquierda {
-    grid-column-start: 1;
-    grid-column-end: 1;
-    grid-row-start: 2;
-    grid-row-end: 2;
+  grid-column-start: 1;
+  grid-column-end: 1;
+  grid-row-start: 2;
+  grid-row-end: 2;
 }
 
 .carga-datos-derecha {
-    grid-column-start: 2;
-    grid-column-end: 2;
-    grid-row-start: 2;
-    grid-row-end: 2;
+  grid-column-start: 2;
+  grid-column-end: 2;
+  grid-row-start: 2;
+  grid-row-end: 2;
 }
 
 .carga-datos-descripción {
-    grid-column-start: 1;
-    grid-column-end: 3;
-    grid-row-start: 3;
-    grid-row-end: 3;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 3;
+  grid-row-end: 3;
 }
 
 .carga-datos input,
 .carga-datos label {
-    display: block;
+  display: block;
 }
 
 .form,
 .Options,
 .DropdownOrg,
 .DropdownDoc {
-    box-sizing: border-box;
-    width: 100%;
-    max-width: 100%;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
 }
 
 .form-row {
-    display: flex;
-    flex-direction: column;
-    gap: 3px;
-    margin-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  margin-bottom: 16px;
 }
 
 .form-row:last-child {
-    margin-bottom: 0;
+  margin-bottom: 0;
 }
 
 .form {
-    height: 160px;
-    border: 2px solid #83AC72;
-    border-radius: 12px;
-    font-family: "Manrope";
-    font-size: 16px;
-    color: #334851;
-    line-height: 33px;
-    padding-left: 13px;
+  height: 160px;
+  border: 2px solid #83AC72;
+  border-radius: 12px;
+  font-family: "Manrope";
+  font-size: 16px;
+  color: #334851;
+  line-height: 33px;
+  padding-left: 13px;
 }
 
 .Options {
-    width: 440px;
-    height: 50px;
-    border: 2px solid #83AC72;
-    border-radius: 12px;
-    appearance: none;
-    font-family: "Manrope";
-    font-size: 16px;
-    color: #334851;
-    padding: 0 40px 0 12px;
+  width: 440px;
+  height: 50px;
+  border: 2px solid #83AC72;
+  border-radius: 12px;
+  appearance: none;
+  font-family: "Manrope";
+  font-size: 16px;
+  color: #334851;
+  padding: 0 40px 0 12px;
 }
 
 .flecha {
-    width: 30px;
-    position: absolute;
-    right: 12px;
-    top: 50%;
-    transform: translateY(-50%);
-    pointer-events: none;
+  width: 30px;
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
 
 }
 
 .DropdownOrg,
 .DropdownEfe {
-    position: relative;
-    width: 440px;
-    height: 50px;
+  position: relative;
+  width: 440px;
+  height: 50px;
 }
 
 .Options [value=""] {
-    display: none;
+  display: none;
+}
+
+/* El menú nativo de <select> toma el ancho de su opción más larga. Este
+   desplegable mantiene el menú dentro del ancho del campo. */
+.custom-select {
+  z-index: 1;
+}
+
+.custom-select.is-open {
+  z-index: 2;
+}
+
+.custom-select__trigger {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 0 40px 0 12px;
+  border: 2px solid #83AC72;
+  border-radius: 12px;
+  background: #FFFFFF;
+  color: #334851;
+  font-family: "Manrope";
+  font-size: 16px;
+  text-align: left;
+  cursor: pointer;
+}
+
+.custom-select__trigger:focus-visible {
+  outline: 3px solid rgba(131, 172, 114, .4);
+  outline-offset: 2px;
+}
+
+.custom-select__value,
+.custom-select__menu button {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.custom-select__value {
+  display: block;
+  width: 100%;
+}
+
+.custom-select__value.is-placeholder {
+  color: #C5C5C5;
+}
+
+.custom-select__menu {
+  position: absolute;
+  z-index: 3;
+  top: calc(100% + 4px);
+  left: 0;
+  box-sizing: border-box;
+  width: 100%;
+  max-height: 220px;
+  margin: 0;
+  padding: 4px 0;
+  overflow-y: auto;
+  list-style: none;
+  border: 1px solid #CBCBCB;
+  border-radius: 8px;
+  background: #FFFFFF;
+  box-shadow: 0 4px 10px rgba(51, 72, 81, .2);
+}
+
+.custom-select__menu button {
+  display: block;
+  width: 100%;
+  padding: 10px 12px;
+  border: 0;
+  background: transparent;
+  color: #334851;
+  font-family: "Manrope";
+  font-size: 16px;
+  text-align: left;
+  cursor: pointer;
+}
+
+.custom-select__menu button:hover,
+.custom-select__menu button:focus-visible {
+  background: #EEF4EA;
+  outline: none;
 }
 
 .label {
-    font-family: "Manrope-bold";
-    color: #83AC72;
+  font-family: "Manrope-bold";
+  color: #83AC72;
 }
 
 .botones {
-    grid-column-start: 2;
-    grid-column-end: 2;
-    grid-row-start: 1;
-    grid-row-end: 1;
-    justify-self: end;
-    align-self: center;
+  grid-column-start: 2;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 1;
+  justify-self: end;
+  align-self: center;
 }
 
 .boton-volver {
-    border: none;
-    border-radius: 10px;
-    background-color: #FF0000;
-    color: #FFFFFF;
-    font-family: "Manrope-bold";
-    width: 107px;
-    height: 33px;
-    margin-right: 3px;
+  background-color: transparent;
+  border: 2px solid #FF0000;
+  color: #FF0000;
+  border-radius: 10px;
+  font-family: "Manrope-bold";
+  width: 107px;
+  height: 33px;
+  margin-right: 9px;
 }
 
 .boton-volver:hover {
-    background-color: #BF0000;
+  background-color: #BF0000;
 }
 
 .boton-continuar {
-    border: none;
-    border-radius: 10px;
-    background-color: #6A972F;
-    color: #FFFFFF;
-    font-family: "Manrope-bold";
-    width: 107px;
-    height: 33px;
+  border: none;
+  border-radius: 10px;
+  background-color: #6A972F;
+  color: #FFFFFF;
+  font-family: "Manrope-bold";
+  width: 107px;
+  height: 33px;
 }
 
 b {
-    font-family: "Manrope-ExtraBold";
+  font-family: "Manrope-ExtraBold";
 }
 
 .form-contenedor {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 
 .label {
-    font-family: "Manrope-bold";
-    color: #83AC72;
+  font-family: "Manrope-bold";
+  color: #83AC72;
 }
 
 ::placeholder {
-    color: #C5C5C5;
-    font-family: "Manrope";
+  color: #C5C5C5;
+  font-family: "Manrope";
 }
 
 //LG: 991px
@@ -297,11 +382,31 @@ b {
     column-gap: 0;
   }
 
-  .orden-elementos              { grid-column: 1; grid-row: 1; }
-  .botones                      { grid-column: 1; grid-row: 2; justify-self: start; }
-  .carga-datos-izquierda        { grid-column: 1; grid-row: 3; }
-  .carga-datos-derecha          { grid-column: 1; grid-row: 4; }
-  .carga-datos-descripción      { grid-column: 1; grid-row: 5; }
+  .orden-elementos {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .botones {
+    grid-column: 1;
+    grid-row: 2;
+    justify-self: start;
+  }
+
+  .carga-datos-izquierda {
+    grid-column: 1;
+    grid-row: 3;
+  }
+
+  .carga-datos-derecha {
+    grid-column: 1;
+    grid-row: 4;
+  }
+
+  .carga-datos-descripción {
+    grid-column: 1;
+    grid-row: 5;
+  }
 
   .form,
   .Options,
@@ -310,7 +415,9 @@ b {
     width: 100%;
   }
 
-  .elemento2 { font-size: 22px; }
+  .elemento2 {
+    font-size: 22px;
+  }
 }
 
 // SM:575px 
@@ -337,10 +444,25 @@ b {
     column-gap: 0;
   }
 
-  .orden-elementos            { grid-column: 1; grid-row: 1; }
-  .carga-datos-izquierda      { grid-column: 1; grid-row: 2; }
-  .carga-datos-derecha        { grid-column: 1; grid-row: 3; }
-  .carga-datos-descripción    { grid-column: 1; grid-row: 4; }
+  .orden-elementos {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .carga-datos-izquierda {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  .carga-datos-derecha {
+    grid-column: 1;
+    grid-row: 3;
+  }
+
+  .carga-datos-descripción {
+    grid-column: 1;
+    grid-row: 4;
+  }
 
 
   .botones {
@@ -354,12 +476,14 @@ b {
   }
 
   .boton-volver {
-    flex: 1;
-    height: 44px;
-    margin-right: 0;
     background-color: transparent;
     border: 2px solid #FF0000;
     color: #FF0000;
+    border-radius: 10px;
+    font-family: "Manrope-bold";
+    width: 107px;
+    height: 33px;
+    margin-right: 9px;
   }
 
   .boton-volver:hover {
@@ -368,7 +492,7 @@ b {
 
   .boton-continuar {
     flex: 1;
-    height: 44px;
+    // height: 44px;
   }
 
   .form,
@@ -381,6 +505,12 @@ b {
   textarea.form {
     height: 120px;
   }
-  .elemento2 { font-size: 20px; }
-  .elemento3 { font-size: 14px; }
+
+  .elemento2 {
+    font-size: 20px;
+  }
+
+  .elemento3 {
+    font-size: 14px;
+  }
 }
