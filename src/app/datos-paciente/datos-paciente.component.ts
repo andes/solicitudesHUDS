@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { Location } from '@angular/common';
+import { SolicitudService } from '../solicitud.service';
 
 @Component({
   selector: 'app-datos-paciente',
@@ -9,13 +10,29 @@ import { Location } from '@angular/common';
 })
 export class DatosPacienteComponent {
 
-    constructor(private router: Router, private location: Location) {}
-    
-    goto() {
-    this.router.navigate(['/descripcion']);
-  }
+    constructor(
+        private router: Router,
+        private location: Location,
+        public solicitudService: SolicitudService
+    ) {}
 
-  vuelve() {
-    this.location.back();
-  }
+    onGeneroChange(value: string) {
+        const generoId: Record<string, number> = {
+            Masculino: 1,
+            Femenino: 2,
+            'No binario': 3
+        };
+        this.solicitudService.paciente.genero = {
+            id: generoId[value] || null,
+            tipo: value
+        };
+    }
+
+    goto() {
+        this.router.navigate(['/descripcion']);
+    }
+
+    vuelve() {
+        this.location.back();
+    }
 }

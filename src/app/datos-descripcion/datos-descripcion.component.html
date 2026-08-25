@@ -65,7 +65,7 @@
         </div>
     </form>
 
-    <form class="carga-datos-derecha" name="carga-datos">
+    <form class="carga-datos-derecha" name="carga-datos-derecha">
         <div class="form-row">
             <label class="label" id="efector-label">Seleccione efector<span style="color:#E00713">*</span>: </label>
             <div class="DropdownEfe custom-select" [class.is-open]="openDropdown === 'efector'">
@@ -95,7 +95,8 @@
 
     </form>
 
-    <form class="carga-datos-descripción" name="carga-datos">
+    <form class="carga-datos-descripción" name="carga-datos-desc">
         <label class="label">Descripción:</label>
-        <textarea class="form" type="text" name="Nombre" placeholder="Breve descripción del pedido"></textarea>
+        <textarea class="form" type="text" name="Descripcion" placeholder="Breve descripción del pedido"
+                  [(ngModel)]="solicitudService.pedido.descripcion"></textarea>
     </form>

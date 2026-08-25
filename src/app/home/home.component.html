@@ -13,22 +13,24 @@
 
 <div class="TextoLargo">
     <div class="texto-legal">
+
         Recuerde que todos los ingresos y acciones realizados en la HUDS a través
         de su usuario y contraseña quedarán registrados.
 
+
+
+        <div class="texto-oculto" *ngIf="verMas">
+            El formulario aquí presente reviste el carácter de Declaración Jurada,
+            quedando sujetos los infractores a las penalidades previstas en el
+            Código Penal. Es importante recordar que la Ley 2611, en su artículo 4°, inciso K, señala:
+            “Los pacientes tienen derecho a la intimidad y confidencialidad de los datos.
+            En correspondencia con este derecho el servidor público debe indefectiblemente
+            guardar y preservar el secreto profesional”
+        </div>
         <div class="ver-mas-container">
             <span class="ver-mas-btn" (click)="toggleVerMas()">
                 {{ verMas ? 'VER MENOS' : 'VER MÁS' }}
             </span>
-
-            <div class="texto-oculto" *ngIf="verMas">
-                El formulario aquí presente reviste el carácter de Declaración Jurada,
-                quedando sujetos los infractores a las penalidades previstas en el
-                Código Penal. Es importante recordar que la Ley 2611, en su artículo 4°, inciso K, señala:
-                “Los pacientes tienen derecho a la intimidad y confidencialidad de los datos.
-                En correspondencia con este derecho el servidor público debe indefectiblemente
-                guardar y preservar el secreto profesional”
-            </div>
         </div>
     </div>
 </div>

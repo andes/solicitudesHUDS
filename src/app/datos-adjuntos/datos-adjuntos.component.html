@@ -40,7 +40,18 @@
         <div class="espacio-carga">
             <img src="/assets/Logos/download-flecha.svg" alt="Imagen de carga" class="imagen-carga">
             <div class="tipo-carga">Máximo de tamaño a subir: 15MB </div>
-            <button class="boton-carga" type="button">CARGAR ARCHIVOS</button>
+            <input type="file" #fileInput accept=".pdf" multiple style="display: none"
+                   (change)="onFileSelected($event)">
+            <button class="boton-carga" type="button" (click)="fileInput.click()">CARGAR ARCHIVOS</button>
         </div>
         <p class="Texto-carga-p">Solo se admiten archivos en formato PDF</p>
+
+        <div *ngIf="archivosSeleccionados.length > 0" style="margin-top: 10px;">
+            <p><b>Archivos seleccionados:</b></p>
+            <ul>
+                <li *ngFor="let archivo of archivosSeleccionados">
+                    {{ archivo.name }} ({{ (archivo.size / 1024).toFixed(1) }} KB)
+                </li>
+            </ul>
+        </div>
     </div>

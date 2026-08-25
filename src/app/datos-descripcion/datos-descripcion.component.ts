@@ -1,6 +1,7 @@
 import { Component, ElementRef, HostListener } from '@angular/core';
 import { Router } from '@angular/router';
 import { Location } from '@angular/common';
+import { SolicitudService } from '../solicitud.service';
 
 @Component({
   selector: 'app-datos-descripcion',
@@ -30,7 +31,8 @@ export class DatosDescripcionComponent {
   constructor(
     private router: Router,
     private location: Location,
-    private elementRef: ElementRef<HTMLElement>
+    private elementRef: ElementRef<HTMLElement>,
+    public solicitudService: SolicitudService
   ) {}
 
   @HostListener('document:click', ['$event'])
@@ -47,8 +49,18 @@ export class DatosDescripcionComponent {
   selectOption(dropdown: 'institution' | 'efector', value: string): void {
     if (dropdown === 'institution') {
       this.selectedInstitution = value;
+      const label = this.getOptionLabel(this.institutions, value);
+      this.solicitudService.pedido.institucion = {
+        id: this.institutions.findIndex(i => i.value === value) + 1,
+        nombre: label
+      };
     } else {
       this.selectedEfector = value;
+      const label = this.getOptionLabel(this.efectores, value);
+      this.solicitudService.pedido.efector = {
+        id: this.efectores.findIndex(e => e.value === value) + 1,
+        nombre: label
+      };
     }
     this.openDropdown = null;
   }

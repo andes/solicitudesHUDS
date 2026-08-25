@@ -118,7 +118,7 @@ nav[aria-label="Progreso de la solicitud"] {
   font-family: "Manrope-bold";
   width: 107px;
   height: 33px;
-  margin-right: 9px;
+  margin-right: 4px;
 }
 
 .boton-volver:hover {
@@ -143,27 +143,20 @@ b {
   display: grid;
   margin-top: 30px;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  grid-template-rows: auto auto 61px;
   width: 100%;
   max-width: 100%;
   box-sizing: border-box;
   justify-content: center;
   column-gap: 30px;
-  row-gap: 20px;
+  row-gap: 16px;
 }
 
-.carga-datos-izquierda {
-  grid-column-start: 1;
-  grid-column-end: 1;
-  grid-row-start: 2;
-  grid-row-end: 2;
+.izq {
+  grid-column: 1;
 }
 
-.carga-datos-derecha {
-  grid-column-start: 2;
-  grid-column-end: 2;
-  grid-row-start: 2;
-  grid-row-end: 2;
+.der {
+  grid-column: 2;
 }
 
 .carga-datos input,
@@ -185,11 +178,6 @@ b {
   display: flex;
   flex-direction: column;
   gap: 3px;
-  margin-bottom: 16px;
-}
-
-.form-row:last-child {
-  margin-bottom: 0;
 }
 
 .form {
@@ -260,9 +248,7 @@ b {
   align-items: center;
   grid-column-start: 1;
   grid-column-end: 3;
-  grid-row-start: 3;
-  grid-row-end: 4;
-
+  margin-top: 4px;
 }
 
 // Cortes de línea manuales para .parrafoImp
@@ -309,7 +295,6 @@ b {
 
   .grid-form-contenedor {
     grid-template-columns: 1fr;
-    grid-template-rows: auto;
     column-gap: 0;
   }
 
@@ -324,19 +309,13 @@ b {
     justify-self: start;
   }
 
-  .carga-datos-izquierda {
+  .izq,
+  .der {
     grid-column: 1;
-    grid-row: 3;
-  }
-
-  .carga-datos-derecha {
-    grid-column: 1;
-    grid-row: 4;
   }
 
   .Parrafo {
     grid-column: 1;
-    grid-row: 5;
     height: auto;
     padding: 12px 16px;
   }
@@ -378,7 +357,6 @@ b {
   // Grid 
   .grid-form-contenedor {
     grid-template-columns: 1fr;
-    grid-template-rows: auto;
     column-gap: 0;
   }
 
@@ -387,19 +365,13 @@ b {
     grid-row: 1;
   }
 
-  .carga-datos-izquierda {
+  .izq,
+  .der {
     grid-column: 1;
-    grid-row: 2;
-  }
-
-  .carga-datos-derecha {
-    grid-column: 1;
-    grid-row: 3;
   }
 
   .Parrafo {
     grid-column: 1;
-    grid-row: 4;
     height: auto;
     padding: 12px 16px;
   }
@@ -415,7 +387,6 @@ b {
 
   .botones {
     grid-column: 1;
-    grid-row: 5;
     display: flex;
     flex-direction: row;
     gap: 12px;
@@ -439,7 +410,7 @@ b {
 
   .boton-continuar {
     flex: 1;
-    //height: 44px;
+    height: 44px;
   }
 
   .form,

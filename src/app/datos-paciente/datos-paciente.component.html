@@ -35,45 +35,43 @@
         <button class="boton-continuar" (click)="goto()" type="button">CONTINUAR</button>
     </div>
 
-    <form class="carga-datos-izquierda" name="carga-datos">
+    <div class="form-row izq">
+        <label class="label">Nombre <span style="color:#E00713">*</span>:</label>
+        <input class="form" type="text" name="Nombre" required
+               [(ngModel)]="solicitudService.paciente.nombre">
+    </div>
 
-        <div class="form-row">
-            <label class="label">Nombre <span style="color:#E00713">*</span>:</label>
-            <input class="form" type="text" name="Nombre" required>
+    <div class="form-row der">
+        <label class="label">Apellido <span style="color:#E00713">*</span>:</label>
+        <input class="form" type="text" name="Apellido" required
+               [(ngModel)]="solicitudService.paciente.apellido">
+    </div>
+
+    <div class="form-row izq">
+        <label class="label">Documento <span style="color:#E00713">*</span>:</label>
+        <input class="form" type="text" name="Documento" required
+               [(ngModel)]="solicitudService.paciente.documento">
+    </div>
+
+    <div class="form-row der">
+        <label class="label" for="fecha-nacimiento">Fecha de nacimiento <span style="color:#E00713">*</span>: </label>
+        <input id="fecha-nacimiento" class="form" type="date" name="FechaNacimiento" required
+               [(ngModel)]="solicitudService.paciente.fechadeNacimiento">
+    </div>
+
+    <div class="form-row izq">
+        <label class="label">Sexo <span style="color:#E00713">*</span>: </label>
+        <div class="DropdownSexo">
+            <img class="flecha" src="assets/Logos/menu-down.svg" alt="Flecha" />
+            <select name="Sexo" class="Options"
+                    [ngModel]="solicitudService.paciente.genero.tipo"
+                    (ngModelChange)="onGeneroChange($event)">
+                <option value=""></option>
+                <option value="Masculino">Masculino</option>
+                <option value="Femenino">Femenino</option>
+                <option value="No binario">No binario</option>
+            </select>
         </div>
-
-        <div class="form-row">
-            <label class="label">Documento <span style="color:#E00713">*</span>:</label>
-            <input class="form" type="text" name="Documento" required>
-        </div>
-
-        <div class="form-row">
-            <label class="label">Sexo <span style="color:#E00713">*</span>: </label>
-            <div class="DropdownSexo">
-                <img class="flecha" src="assets/Logos/menu-down.svg" alt="Flecha" />
-                <select name="Sexo" class="Options">
-                    <option value=""></option>
-                    <option value="Masculino">Masculino</option>
-                    <option value="Femenino">Femenino</option>
-                    <option value="No binario">No binario</option>
-                </select>
-            </div>
-        </div>
-
-    </form>
-
-    <form class="carga-datos-derecha" name="carga-datos">
-
-        <div class="form-row">
-            <label class="label">Apellido <span style="color:#E00713">*</span>:</label>
-            <input class="form" type="text" name="Apellido" required>
-        </div>
-
-        <div class="form-row">
-            <label class="label">Fecha de nacimiento <span style="color:#E00713">*</span>: </label>
-            <input class="form" type="text" name="Fecha de nacimiento" required>
-        </div>
-
-    </form>
+    </div>
 
 </div>

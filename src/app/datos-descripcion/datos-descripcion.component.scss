@@ -476,14 +476,14 @@ b {
   }
 
   .boton-volver {
+    flex: 1;
+    height: 44px;
+    margin-right: 0;
     background-color: transparent;
     border: 2px solid #FF0000;
     color: #FF0000;
     border-radius: 10px;
     font-family: "Manrope-bold";
-    width: 107px;
-    height: 33px;
-    margin-right: 9px;
   }
 
   .boton-volver:hover {
@@ -492,7 +492,7 @@ b {
 
   .boton-continuar {
     flex: 1;
-    // height: 44px;
+    height: 44px;
   }
 
   .form,
