@@ -10,6 +10,7 @@ export interface DatosSolicitante {
         pasaporte: number | null;
     };
     email: string;
+    codigoEmail: string;
     telefono: number | null;
     organismo: {
         nombre: string;
@@ -23,6 +24,7 @@ export interface DatosPaciente {
     apellido: string;
     documento: number | null;
     email: string;
+    codigoEmail: string;
     fechadeNacimiento: string;
     genero: {
         id: number | null;
@@ -55,6 +57,7 @@ export class SolicitudService {
         apellido: '',
         tipoDocumento: { dni: null, pasaporte: null },
         email: '',
+        codigoEmail: '',
         telefono: null,
         organismo: { nombre: '', codigo: null, otro: '' }
     };
@@ -64,6 +67,7 @@ export class SolicitudService {
         apellido: '',
         documento: null,
         email: '',
+        codigoEmail: '',
         fechadeNacimiento: '',
         genero: { id: null, tipo: '' }
     };
@@ -90,6 +94,14 @@ export class SolicitudService {
         return this.http.post(`${this.baseUrl}/solicitudes`, body);
     }
 
+    enviarCodigoEmail(email: string): Observable<any> {
+        return this.http.post(`${this.baseUrl}/verificacion-email`, { email });
+    }
+
+    validarCodigoEmail(email: string, codigo: string): Observable<any> {
+        return this.http.post(`${this.baseUrl}/verificacion-email/validar`, { email, codigo });
+    }
+
     /**
      * Resetea todos los datos del wizard.
      */
@@ -99,6 +111,7 @@ export class SolicitudService {
             apellido: '',
             tipoDocumento: { dni: null, pasaporte: null },
             email: '',
+            codigoEmail: '',
             telefono: null,
             organismo: { nombre: '', codigo: null, otro: '' }
         };
@@ -107,6 +120,7 @@ export class SolicitudService {
             apellido: '',
             documento: null,
             email: '',
+            codigoEmail: '',
             fechadeNacimiento: '',
             genero: { id: null, tipo: '' }
         };
