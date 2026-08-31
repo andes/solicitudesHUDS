@@ -17,6 +17,7 @@ export interface DatosSolicitante {
         codigo: number | null;
         otro: string;
     };
+    emailVerificado?: boolean;
 }
 
 export interface DatosPaciente {
@@ -59,7 +60,8 @@ export class SolicitudService {
         email: '',
         codigoEmail: '',
         telefono: null,
-        organismo: { nombre: '', codigo: null, otro: '' }
+        organismo: { nombre: '', codigo: null, otro: '' },
+        emailVerificado: false
     };
 
     paciente: DatosPaciente = {
@@ -113,7 +115,8 @@ export class SolicitudService {
             email: '',
             codigoEmail: '',
             telefono: null,
-            organismo: { nombre: '', codigo: null, otro: '' }
+            organismo: { nombre: '', codigo: null, otro: '' },
+            emailVerificado: false
         };
         this.paciente = {
             nombre: '',

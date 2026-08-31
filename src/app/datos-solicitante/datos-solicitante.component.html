@@ -37,12 +37,12 @@
 
     <div class="form-row izq">
         <label class="label">Nombre <span style="color:#E00713">*</span>:</label>
-        <input class="form" type="text" name="Nombre" required [(ngModel)]="solicitudService.solicitante.nombre">
+        <input class="form" type="text" name="Nombre" required [(ngModel)]="solicitudService.solicitante.nombre" (blur)="formatNombre()">
     </div>
 
     <div class="form-row der">
         <label class="label">Apellido <span style="color:#E00713">*</span>:</label>
-        <input class="form" type="text" name="Apellido" required [(ngModel)]="solicitudService.solicitante.apellido">
+        <input class="form" type="text" name="Apellido" required [(ngModel)]="solicitudService.solicitante.apellido" (blur)="formatApellido()">
     </div>
 
     <div class="form-row izq">
@@ -67,7 +67,8 @@
         <label class="label">Email <span style="color:#E00713">*</span>: </label>
         <input class="form" type="email" name="Email" required autocomplete="email"
             [(ngModel)]="solicitudService.solicitante.email" (ngModelChange)="onEmailChange($event)"
-            (blur)="enviarCodigoEmail()" (keyup.enter)="enviarCodigoEmail()">
+            (blur)="enviarCodigoEmail()" (keyup.enter)="enviarCodigoEmail()"
+            [disabled]="emailVerificado">
         <span class="error-email" *ngIf="errorEmail && !mostrandoCodigo">{{ errorEmail }}</span>
     </div>
 
