@@ -1,77 +1,124 @@
-<nav class="MenuPrincipal">
-    <ul class="MenuListado">
-        <li class="contenedor-a">
-            <span class="step-1">1</span>
-            <span class="Texto">Datos del solicitante</span>
+<nav aria-label="Progreso de la solicitud">
+    <ol class="MenuPrincipal">
+        <li class="MenuPrincipal__step" aria-current="step">
+            <span class="MenuPrincipal__circulo">1</span>
+            <span class="MenuPrincipal__label">Datos del solicitante</span>
         </li>
 
-        <div class="Flecha-Menu">
-            <img class="flechaMenu" src="assets/Logos/flecha.huds.svg" alt="flecha" />
-        </div>
-
-        <li class="contenedor-v">
-            <span class="step-2">2</span>
-            <span class="Texto-1">Datos del paciente</span>
+        <li class="MenuPrincipal__step">
+            <span class="MenuPrincipal__circulo">2</span>
+            <span class="MenuPrincipal__label">Datos del paciente</span>
         </li>
 
-        <div class="Flecha-Menu">
-            <img class="flechaMenu" src="assets/Logos/flecha.huds.svg" alt="flecha" />
-        </div>
-
-        <li class="contenedor-v">
-            <span class="step-2">3</span>
-            <span class="Texto-1">Descripción</span>
+        <li class="MenuPrincipal__step">
+            <span class="MenuPrincipal__circulo">3</span>
+            <span class="MenuPrincipal__label">Descripción</span>
         </li>
 
-        <div class="Flecha-Menu">
-            <img class="flechaMenu" src="assets/Logos/flecha.huds.svg" alt="flecha" />
-        </div>
-
-        <li class="contenedor-v">
-            <span class="step-2">4</span>
-            <span class="Texto-1">Carga de adjuntos</span>
+        <li class="MenuPrincipal__step">
+            <span class="MenuPrincipal__circulo">4</span>
+            <span class="MenuPrincipal__label">Carga de adjuntos</span>
         </li>
-
-    </ul>
+    </ol>
 </nav>
 
-<div class="orden-elementos">
-    <p>Ingresá tus <b>datos personales</b> para continuar con el pedido</p>
+<hr class="linea-personalizada">
+
+<div class="grid-form-contenedor">
+    <div class="orden-elementos">
+        <div class="elemento1"><b>Paso 1 de 4</b></div>
+        <div class="elemento2"><b>Datos del solicitante</b></div>
+        <div class="elemento3">Ingresá tus datos personales para continuar con el pedido</div>
+    </div>
     <div class="botones">
-        <button class="boton-volver" type="button">VOLVER</button>
+        <button class="boton-volver" type="button" (click)="vuelve()">VOLVER</button>
         <button class="boton-continuar" (click)="goto()" type="button">CONTINUAR</button>
     </div>
-</div>
-<hr>
 
-<div class="form-contenedor">
-    <form name="carga-datos">
+    <div class="form-row izq">
         <label class="label">Nombre <span style="color:#E00713">*</span>:</label>
-        <input class="form" type="text" name="Nombre" required>
-        <label class="label">Apellido <span style="color:#E00713">*</span>:</label>
-        <input class="form" type="text" name="Apellido" required>
-        <label class="label">Tipo de documento <span style="color:#E00713">*</span>:</label>
+        <input class="form" type="text" name="Nombre" required [(ngModel)]="solicitudService.solicitante.nombre" (blur)="formatNombre()">
+    </div>
 
+    <div class="form-row der">
+        <label class="label">Apellido <span style="color:#E00713">*</span>:</label>
+        <input class="form" type="text" name="Apellido" required [(ngModel)]="solicitudService.solicitante.apellido" (blur)="formatApellido()">
+    </div>
+
+    <div class="form-row izq">
+        <label class="label">Tipo de documento <span style="color:#E00713">*</span>:</label>
         <div class="DropdownDoc">
-            <img class=flecha src="assets/Logos/menu-down.svg" alt="Flecha" />
-            <select name="opciones" class="Options">
+            <img class="flecha" src="assets/Logos/menu-down.svg" alt="Flecha" />
+            <select name="opciones" class="Options" [(ngModel)]="tipoDocumentoSeleccionado"
+                (ngModelChange)="onTipoDocumentoChange($event)">
                 <option value=""></option>
                 <option value="DNI">DNI</option>
                 <option value="Pasaporte">Pasaporte</option>
             </select>
         </div>
+    </div>
 
+    <div class="form-row der">
         <label class="label">Nº de documento <span style="color:#E00713">*</span>: </label>
-        <input class="form" type="text" name="Número de documento" required>
-        <label class="label">Email <span style="color:#E00713">*</span>: </label>
-        <input class="form" type="text" name="Email" required>
-        <label class="label">Teléfono <span style="color:#E00713">*</span>: </label>
-        <input class="form" type="number" name="Teléfono" required>
-        <label class="label">Organismo <span style="color:#E00713">*</span>: </label>
+        <input class="form" type="number" name="NumeroDocumento" required [(ngModel)]="numeroDocumento">
+    </div>
 
+    <div class="form-row izq">
+        <label class="label">Email <span style="color:#E00713">*</span>: </label>
+        <input class="form" type="email" name="Email" required autocomplete="email"
+            [(ngModel)]="solicitudService.solicitante.email" (ngModelChange)="onEmailChange($event)"
+            (blur)="enviarCodigoEmail()" (keyup.enter)="enviarCodigoEmail()"
+            [disabled]="emailVerificado">
+        <span class="error-email" *ngIf="errorEmail && !mostrandoCodigo">{{ errorEmail }}</span>
+    </div>
+
+    <!-- Contenedor del código de verificación al ingresar el email -->
+    <div class="verificacion-email-row der" *ngIf="mostrandoCodigo">
+        <div class="verificacion-email-contenedor">
+            <div class="verificacion-info">
+                <div class="check-icon">
+                    <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#83AC72" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                </div>
+                <div class="speech-bubble">
+                    <p>Enviamos un mensaje con un<br>código de verificación al email<br><strong>{{ emailEnmascarado }}</strong></p>
+                </div>
+            </div>
+
+            <div class="verificacion-codigo-box">
+                <label class="label-codigo" for="codigo-email">Código<span style="color:#E00713">*</span></label>
+                <div class="codigo-input-wrapper">
+                    <input id="codigo-email" class="input-codigo" [class.verificado]="emailVerificado"
+                        type="text" name="codigoEmail" required inputmode="numeric" maxlength="6"
+                        autocomplete="one-time-code" placeholder="396396"
+                        [(ngModel)]="solicitudService.solicitante.codigoEmail"
+                        (input)="onCodigoInput()"
+                        (keyup.enter)="verificarCodigoEmail()">
+
+                    <button class="boton-codigo" type="button" (click)="verificarCodigoEmail()"
+                        [disabled]="verificandoCodigo || emailVerificado">
+                        {{ verificandoCodigo ? '...' : (emailVerificado ? '✔' : 'VALIDAR') }}
+                    </button>
+                </div>
+            </div>
+        </div>
+        <span class="mensaje-email" *ngIf="mensajeEmail">{{ mensajeEmail }}</span>
+        <span class="error-email" *ngIf="errorEmail">{{ errorEmail }}</span>
+    </div>
+
+
+    <div class="form-row izq">
+        <label class="label">Teléfono <span style="color:#E00713">*</span>: </label>
+        <input class="form" type="number" name="Telefono" required [(ngModel)]="solicitudService.solicitante.telefono">
+    </div>
+
+    <div class="form-row der">
+        <label class="label">Organismo <span style="color:#E00713">*</span>: </label>
         <div class="DropdownOrg">
-            <img class=flecha src="assets/Logos/menu-down.svg" alt="Flecha" />
-            <select name="Organismo" class="Options">
+            <img class="flecha" src="assets/Logos/menu-down.svg" alt="Flecha" />
+            <select name="Organismo" class="Options" [(ngModel)]="organismoSeleccionado"
+                (ngModelChange)="onOrganismoChange($event)">
                 <option value=""></option>
                 <option value="Juzgado Nº 1">Juzgado Nº 1</option>
                 <option value="Juzgado Nº 2">Juzgado Nº 2</option>
@@ -80,12 +127,17 @@
                 <option value="Otro">Otro</option>
             </select>
         </div>
+    </div>
 
-    </form>
-</div>
+    <div class="form-row izq" *ngIf="organismoSeleccionado === 'Otro'">
+        <label class="label" for="organismo-otro">Especifique el organismo <span style="color:#E00713">*</span>:</label>
+        <input id="organismo-otro" class="form" type="text" name="OrganismoOtro" required
+            [(ngModel)]="solicitudService.solicitante.organismo.otro">
+    </div>
 
+    <div class="Parrafo">
+        <p class="parrafoImp"><b>Importante:</b> En el email confirmado se enviará<br class="parrafo-break"> la
+            información correspondiente al<br class="parrafo-break"> concluir el proceso.</p>
+    </div>
 
-<div class="Parrafo">
-    <p class="parrafoImp">Importante: En el email confirmado se enviará la información correspondiente al concluir el
-        proceso.</p>
 </div>

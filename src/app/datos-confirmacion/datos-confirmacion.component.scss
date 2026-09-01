@@ -1,3 +1,5 @@
+@import 'src/styles/breakpoints';
+
 .LogoConfirmacion {
     width: 72px;
     height: 72px;
@@ -45,4 +47,78 @@
 
 .ContenidoConfirmacion {
     margin-top: 90px;
+}
+
+// LG:991px
+@include lg {
+
+  .TextoPrincipal {
+    font-size: 20px;
+  }
+}
+
+//MD:767px
+@include md {
+
+  .ContenidoConfirmacion {
+    margin-top: 60px;
+    padding: 0 16px;
+  }
+
+  .LogoConfirmacion {
+    width: 64px;
+    height: 64px;
+  }
+
+  .TextoPrincipal {
+    font-size: 19px;
+    margin-bottom: 28px;
+  }
+
+  .TextoIntro {
+    font-size: 16px;
+  }
+
+  .boton-descarga {
+    width: 100%;
+    max-width: 280px;
+    height: 46px;
+  }
+}
+
+//SM:575px 
+@include sm {
+
+  .ContenidoConfirmacion {
+    margin-top: 40px;
+    padding: 0 16px;
+  }
+
+  .LogoConfirmacion {
+    width: 56px;
+    height: 56px;
+    margin: 8px auto;
+  }
+
+  .TextoPrincipal {
+    font-size: 17px;
+    margin-bottom: 20px;
+  }
+
+  .TextoIntro {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  .BotonConfirmacion {
+    margin-top: 24px;
+  }
+
+  .boton-descarga {
+    width: 100%;
+    max-width: 100%;
+    height: 48px;
+    font-size: 14px;
+    padding: 0 12px;
+  }
 }

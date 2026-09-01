@@ -15,6 +15,12 @@ export class HomeComponent implements OnInit, OnDestroy {
         document.body.style.backgroundColor = '#FCF2DC';
     }
 
+    verMas: boolean = false;
+
+    toggleVerMas() {
+        this.verMas = !this.verMas;
+    }
+
     ngOnDestroy(): void {
         document.body.style.backgroundColor = '#FFFFFF';
     }
